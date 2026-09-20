@@ -97,30 +97,20 @@ function Living({ p, state }: { p: Palette; state: State }) {
       <Room p={p} />
       {/* window */}
       <rect x="64" y="66" width="218" height="216" fill={p.glass} stroke={p.stroke} strokeWidth="3" />
-      <path
-        d={`M173 66v216M64 174h218`}
-        stroke={p.stroke}
-        strokeWidth="3"
-        strokeOpacity={isAfter ? 0.8 : 0.5}
-      />
-      {isAfter && (
+      <path d="M173 66v216M64 174h218" stroke={p.stroke} strokeWidth="3" strokeOpacity={isAfter ? 0.8 : 0.5} />
+      {isAfter ? (
         <>
           <rect x="34" y="52" width="26" height="250" fill={p.solid2} stroke={p.stroke} strokeOpacity="0.2" />
           <rect x="286" y="52" width="26" height="250" fill={p.solid2} stroke={p.stroke} strokeOpacity="0.2" />
-        </>
-      )}
-      {/* sofa */}
-      <rect x="358" y="228" width="304" height="80" rx="6" fill={p.solid} />
-      <rect x="342" y="288" width="336" height="64" rx="8" fill={isAfter ? p.solid : p.solid2} />
-      <rect x="378" y="244" width="124" height="52" rx="4" fill={isAfter ? p.solid2 : p.floor} opacity="0.85" />
-      <rect x="518" y="244" width="124" height="52" rx="4" fill={isAfter ? p.solid2 : p.floor} opacity="0.85" />
-      <path d="M362 352v16M658 352v16" stroke={p.stroke} strokeWidth="5" />
-      {/* table */}
-      <rect x="392" y="386" width="196" height="10" rx="2" fill={p.warm} />
-      <path d="M408 396v26M572 396v26" stroke={p.warm} strokeWidth="6" />
-      {isAfter && (
-        <>
+          {/* sofa, table, rug: the room furnished after hand-over */}
           <path d="M330 404h410l38 58H296z" fill={p.bg2} opacity="0.75" />
+          <rect x="358" y="228" width="304" height="80" rx="6" fill={p.solid} />
+          <rect x="342" y="288" width="336" height="64" rx="8" fill={p.solid} />
+          <rect x="378" y="244" width="124" height="52" rx="4" fill={p.solid2} opacity="0.9" />
+          <rect x="518" y="244" width="124" height="52" rx="4" fill={p.solid2} opacity="0.9" />
+          <path d="M362 352v16M658 352v16" stroke={p.stroke} strokeWidth="5" />
+          <rect x="392" y="386" width="196" height="10" rx="2" fill={p.warm} />
+          <path d="M408 396v26M572 396v26" stroke={p.warm} strokeWidth="6" />
           <rect x="438" y="84" width="132" height="98" fill={p.bg2} stroke={p.stroke} strokeWidth="2" />
           <path d="M456 156l30-40 24 30 18-18 24 28z" fill={p.accent} opacity="0.8" />
           <path d="M600 0v112" stroke={p.stroke} strokeWidth="2" />
@@ -131,14 +121,27 @@ function Living({ p, state }: { p: Palette; state: State }) {
             fill={p.leaf}
           />
         </>
-      )}
-      {!isAfter && (
+      ) : (
         <>
+          {/* the flat as found: old radiator, rolled carpet, bare bulb, damp wall */}
+          <rect x="96" y="286" width="154" height="64" fill={p.solid2} stroke={p.stroke} strokeOpacity="0.3" />
+          <path
+            d="M114 290v56M136 290v56M158 290v56M180 290v56M202 290v56M224 290v56"
+            stroke={p.stroke}
+            strokeWidth="3"
+            opacity="0.45"
+          />
           <path d="M508 58l16 62-14 44 18 56" stroke={p.stroke} strokeWidth="2.4" fill="none" opacity="0.7" />
           <ellipse cx="676" cy="122" rx="74" ry="52" fill={p.solid2} opacity="0.65" />
+          <ellipse cx="392" cy="196" rx="44" ry="34" fill={p.solid2} opacity="0.5" />
           <path d="M600 0v146" stroke={p.stroke} strokeWidth="2" />
           <circle cx="600" cy="156" r="11" fill={p.solid2} stroke={p.stroke} strokeWidth="2" />
+          <rect x="452" y="300" width="286" height="52" rx="26" fill={p.solid2} stroke={p.stroke} strokeOpacity="0.3" />
+          <path d="M470 300v52M494 300v52" stroke={p.stroke} strokeWidth="2" opacity="0.4" />
+          <rect x="330" y="316" width="86" height="36" fill={p.solid} opacity="0.7" />
           <path d="M96 392h250" stroke={p.solid2} strokeWidth="10" opacity="0.7" />
+          <path d="M700 268v82" stroke={p.stroke} strokeWidth="3" opacity="0.5" />
+          <rect x="688" y="252" width="26" height="18" fill={p.solid} opacity="0.7" />
         </>
       )}
     </>
