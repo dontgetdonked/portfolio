@@ -63,7 +63,7 @@ export default function Home() {
               beforeNote={hero.beforeNote}
               afterNote={hero.afterNote}
               caption={`${hero.title}, ${hero.surface}`}
-              meta={`${hero.duration} · ${hero.budget}`}
+              meta={`${hero.duration} de lucru, ${hero.budget}`}
             />
           </div>
         </div>

@@ -66,7 +66,7 @@ export function Footer() {
 
       <div className="wrap footer-bottom">
         <span>
-          © {new Date().getFullYear()} ATRIUM Construct SRL · {company.reg} · CUI {company.cui}
+          © {new Date().getFullYear()} ATRIUM Construct SRL, înregistrată {company.reg}, CUI {company.cui}
         </span>
         <span>Firmă fictivă, creată ca proiect de portofoliu.</span>
       </div>

@@ -30,7 +30,7 @@ export default function Quote() {
             <div className="contact-lines" style={{ marginTop: 12 }}>
               {processSteps.slice(0, 3).map((s, i) => (
                 <div className="contact-line" key={s.title}>
-                  <span>Pasul {i + 1} · {s.when}</span>
+                  <span>Pasul {i + 1}, {s.when.toLowerCase()}</span>
                   <b style={{ fontSize: '1rem' }}>{s.title}</b>
                 </div>
               ))}

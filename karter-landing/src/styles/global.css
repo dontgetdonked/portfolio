@@ -128,6 +128,13 @@ ol {
   list-style: none;
 }
 
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
 :focus-visible {
   outline: 3px solid var(--chalk);
   outline-offset: 3px;
@@ -567,7 +574,11 @@ ol {
 
 .hero-fact {
   background: var(--cement);
-  padding: 22px 20px 20px 0;
+  padding: 22px 22px 20px;
+}
+
+.hero-fact:first-child {
+  padding-left: 0;
 }
 
 .hero-fact b {

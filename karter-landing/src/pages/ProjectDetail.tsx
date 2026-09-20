@@ -30,7 +30,7 @@ export default function ProjectDetail() {
             beforeNote={project.beforeNote}
             afterNote={project.afterNote}
             caption={`${project.place}, ${project.year}`}
-            meta={`${project.surface} · ${project.duration} · ${project.budget}`}
+            meta={`${project.surface}, ${project.duration}, ${project.budget}`}
           />
 
           <div className="split-2">
@@ -68,7 +68,7 @@ export default function ProjectDetail() {
                 </p>
                 <h3 style={{ fontSize: '1.25rem' }}>{p.title}</h3>
                 <p className="small muted">
-                  {p.surface} · {p.duration} · {p.budget}
+                  {p.surface}, {p.duration}, {p.budget}
                 </p>
               </Link>
             ))}

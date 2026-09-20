@@ -193,7 +193,7 @@ export function QuoteForm() {
     <form className="quote-shell" onSubmit={submit} noValidate>
       <div className="quote-head">
         <span className="quote-step-name">
-          Pasul {step + 1} din 3 · {stepNames[step]}
+          Pasul {step + 1} din 3: {stepNames[step]}
         </span>
         <span className="quote-progress" aria-hidden>
           {stepNames.map((name, i) => (

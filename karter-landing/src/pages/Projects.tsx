@@ -43,7 +43,7 @@ export default function Projects() {
               </div>
               <div className="proj-body">
                 <p className="proj-where">
-                  {p.category} · {p.place}, {p.year}
+                  {p.category} în {p.place}, {p.year}
                 </p>
                 <h2 style={{ fontSize: 'var(--step-3)' }}>{p.title}</h2>
                 <p className="muted">{p.intro}</p>
