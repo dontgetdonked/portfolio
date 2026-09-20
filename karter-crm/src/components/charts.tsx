@@ -73,7 +73,7 @@ export function AreaChart({
             textAnchor="end"
             fontSize="10.5"
             fill="var(--text-3)"
-            fontVariantNumeric="tabular-nums"
+            style={{ fontVariantNumeric: 'tabular-nums' }}
           >
             {formatValue(t)}
           </text>
@@ -117,7 +117,7 @@ export function AreaChart({
                   fontSize="11.5"
                   fontWeight="600"
                   fill="var(--surface)"
-                  fontVariantNumeric="tabular-nums"
+                  style={{ fontVariantNumeric: 'tabular-nums' }}
                 >
                   {formatValue(d.value)}
                 </text>
@@ -201,7 +201,7 @@ export function DonutChart({
           fontSize="20"
           fontWeight="700"
           fill="var(--text)"
-          fontVariantNumeric="tabular-nums"
+          style={{ fontVariantNumeric: 'tabular-nums' }}
         >
           {centerValue}
         </text>
@@ -251,7 +251,7 @@ export function BarChart({
             textAnchor="end"
             fontSize="10.5"
             fill="var(--text-3)"
-            fontVariantNumeric="tabular-nums"
+            style={{ fontVariantNumeric: 'tabular-nums' }}
           >
             {formatValue(max * t)}
           </text>

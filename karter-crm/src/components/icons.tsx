@@ -5,13 +5,13 @@
  * weight. They inherit `currentColor`, so a parent's text colour drives them.
  * No icon font, no emoji, no third-party sprite.
  */
-import type { SVGProps } from 'react'
+import type { ReactNode, SVGProps } from 'react'
 
 export interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'children'> {
   size?: number
 }
 
-function Svg({ size = 18, strokeWidth = 1.7, children, ...rest }: IconProps & { children: React.ReactNode; strokeWidth?: number }) {
+function Svg({ size = 18, strokeWidth = 1.7, children, ...rest }: IconProps & { children: ReactNode }) {
   return (
     <svg
       width={size}

@@ -20,7 +20,7 @@ import { dateTime, relative } from '@/lib/format'
 import { CHANNEL_LABEL, type Channel, type Direction } from '@/types'
 
 export default function Conversations() {
-  const { state, userById, clientById, dispatch } = useStore()
+  const { state, userById, clientById } = useStore()
 
   const [query, setQuery] = useState('')
   const [channel, setChannel] = useState<'all' | Channel>('all')
