@@ -1,41 +1,43 @@
 import { Link } from 'react-router-dom'
-import { projects, testimonials } from '@/data/site'
-import { CtaBand, PageHead, Stars } from '@/components/ui'
-
-const average = (
-  testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
-).toFixed(1)
+import { projects, reviewStats, testimonials } from '@/data/site'
+import { Closing, PageHead, Rating, Tag } from '@/components/ui'
+import { IconArrow } from '@/components/icons'
 
 export default function Testimonials() {
   return (
     <>
       <PageHead
         crumb="Testimoniale"
-        title="Ce spun beneficiarii după recepția lucrării"
+        title="Ce spun beneficiarii după recepție"
         lede="Cerem părerea la o lună după predare, când se vede dacă ceva scârțâie. Publicăm și recenziile de patru stele, cu motivul lor cu tot."
+        photo="kitchen"
+        tag={<Tag name="Bucătărie cu insulă" spec="foto ilustrativă" />}
       />
 
-      <section className="band">
+      <section className="section" style={{ paddingTop: 0 }} aria-label="Recenzii">
         <div className="wrap">
-          <div className="rating-bar">
-            <b>{average}</b>
-            <span>media pe 112 recenzii, din 2019 încoace</span>
-            <span>96% dintre beneficiari ne-au recomandat mai departe</span>
+          <div className="score">
+            <strong>{reviewStats.average}</strong>
+            <span>
+              din 5, media pe {reviewStats.count} recenzii din {reviewStats.since} încoace.{' '}
+              {reviewStats.recommend} dintre beneficiari ne-au recomandat mai departe.
+            </span>
           </div>
 
-          <div className="quote-grid">
+          <div className="voices is-all">
             {testimonials.map((t) => {
               const project = projects.find((p) => p.slug === t.project)
               return (
-                <figure className="quote-card" key={t.name}>
-                  <Stars value={t.rating} />
+                <figure className="voice" key={t.name}>
+                  <Rating value={t.rating} />
                   <blockquote>{t.text}</blockquote>
-                  <figcaption className="who">
+                  <figcaption>
                     <b>{t.name}</b>
                     <span>{t.role}</span>
                     {project && (
-                      <Link className="link-u" to={`/proiecte/${project.slug}`} style={{ justifySelf: 'start', marginTop: 8 }}>
+                      <Link className="link" to={`/proiecte/${project.slug}`} style={{ marginTop: 8 }}>
                         Vezi lucrarea
+                        <IconArrow size={16} />
                       </Link>
                     )}
                   </figcaption>
@@ -46,7 +48,7 @@ export default function Testimonials() {
         </div>
       </section>
 
-      <CtaBand
+      <Closing
         title="Vrei să vorbești cu unul dintre ei?"
         text="La cerere, îți dăm numărul a doi beneficiari cu lucrări asemănătoare cu a ta, dacă au fost de acord."
       />

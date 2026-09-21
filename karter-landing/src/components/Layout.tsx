@@ -5,11 +5,20 @@ import { Footer } from '@/components/Footer'
 import { WhatsFab } from '@/components/WhatsFab'
 
 export function Layout() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
+  /* A new page starts at the top; a link with an anchor (the footer's service
+     links) lands on that entry instead. */
   useEffect(() => {
+    if (hash) {
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)))
+      if (target) {
+        target.scrollIntoView({ block: 'start' })
+        return
+      }
+    }
     window.scrollTo({ top: 0, behavior: 'auto' })
-  }, [pathname])
+  }, [pathname, hash])
 
   return (
     <>

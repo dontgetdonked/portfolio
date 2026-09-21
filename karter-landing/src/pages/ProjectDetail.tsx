@@ -1,7 +1,8 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { projects, testimonials } from '@/data/site'
-import { BeforeAfter } from '@/components/BeforeAfter'
-import { Checklist, CtaBand, Stars } from '@/components/ui'
+import { materials, projectFinish, projectPhoto } from '@/data/media'
+import { ProjectSheet } from '@/components/ProjectSheet'
+import { Checks, Chip, Closing, MaterialTag, Photo, Rating, Tag } from '@/components/ui'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -9,46 +10,84 @@ export default function ProjectDetail() {
   if (!project) return <Navigate to="/proiecte" replace />
 
   const voice = testimonials.find((t) => t.project === project.slug)
-  const others = projects.filter((p) => p.slug !== project.slug).slice(0, 3)
+  const others = projects.filter((p) => p.slug !== project.slug).slice(0, 2)
+  const finish = materials[projectFinish[project.slug]]
 
   return (
     <>
       <section className="page-head">
-        <div className="wrap">
-          <p className="crumb">
-            <Link to="/">Acasă</Link> / <Link to="/proiecte">Proiecte</Link> / {project.category}
-          </p>
-          <h1>{project.title}</h1>
-          <p className="lede">{project.intro}</p>
+        <div className="wrap page-board">
+          <div className="chip page-plaster">
+            <Photo name="plaster" size="half" eager />
+            <p className="crumb">
+              <Link to="/">Acasă</Link>
+              <span aria-hidden>/</span>
+              <Link to="/proiecte">Proiecte</Link>
+              <span aria-hidden>/</span>
+              {project.category}
+            </p>
+            <h1>{project.title}</h1>
+            <p className="lede">{project.intro}</p>
+          </div>
+          <Chip photo={projectPhoto[project.slug]} size="half" className="page-photo" eager>
+            <Tag name={project.category} spec="foto ilustrativă" />
+          </Chip>
         </div>
       </section>
 
-      <section className="band">
-        <div className="wrap stack" style={{ gap: 'clamp(28px, 4vw, 48px)' }}>
-          <BeforeAfter
-            variant={project.scene}
-            beforeNote={project.beforeNote}
-            afterNote={project.afterNote}
-            caption={`${project.place}, ${project.year}`}
-            meta={`${project.surface}, ${project.duration}, ${project.budget}`}
-          />
+      <section className="section" style={{ paddingTop: 0 }} aria-label="Fișa lucrării">
+        <div className="wrap stack" style={{ gap: 'clamp(40px, 5vw, 72px)' }}>
+          <dl className="ledger">
+            <div>
+              <dt>Valoare contract</dt>
+              <dd className="is-lead">{project.budget}</dd>
+            </div>
+            <div>
+              <dt>Suprafață</dt>
+              <dd>{project.surface}</dd>
+            </div>
+            <div>
+              <dt>Durata lucrării</dt>
+              <dd>{project.duration}</dd>
+            </div>
+            <div>
+              <dt>Locul</dt>
+              <dd>{project.place}</dd>
+            </div>
+            <div>
+              <dt>Anul predării</dt>
+              <dd>{project.year}</dd>
+            </div>
+          </dl>
 
-          <div className="split-2">
-            <div className="stack">
-              <h2 style={{ fontSize: 'var(--step-3)' }}>Ce am găsit pe șantier</h2>
-              <p>{project.brief}</p>
-            </div>
-            <div className="stack">
-              <h2 style={{ fontSize: 'var(--step-3)' }}>Ce am executat</h2>
-              <Checklist items={project.work} />
-            </div>
+          <div className="found">
+            <article className="found-card">
+              <Chip photo="brick" size="half">
+                <MaterialTag m={{ ...materials.brick, spec: 'mostră ilustrativă' }} />
+              </Chip>
+              <div>
+                <h2 style={{ fontSize: 'clamp(2rem, 3.4vw, 2.8rem)' }}>Ce am găsit pe șantier</h2>
+                <p className="found-note">{project.beforeNote}</p>
+                <p>{project.brief}</p>
+              </div>
+            </article>
+            <article className="found-card">
+              <Chip photo={finish.photo} size="half">
+                <MaterialTag m={{ ...finish, spec: 'mostră ilustrativă' }} />
+              </Chip>
+              <div>
+                <h2 style={{ fontSize: 'clamp(2rem, 3.4vw, 2.8rem)' }}>Ce am executat</h2>
+                <p className="found-note">{project.afterNote}</p>
+                <Checks items={project.work} />
+              </div>
+            </article>
           </div>
 
           {voice && (
-            <figure className="quote-card" style={{ maxWidth: 720 }}>
-              <Stars value={voice.rating} />
+            <figure className="voice is-lead" style={{ maxWidth: 880 }}>
+              <Rating value={voice.rating} />
               <blockquote>{voice.text}</blockquote>
-              <figcaption className="who">
+              <figcaption>
                 <b>{voice.name}</b>
                 <span>{voice.role}</span>
               </figcaption>
@@ -57,26 +96,20 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      <section className="band band-plaster band-tight">
+      <section className="section field-sunk" aria-labelledby="alte-lucrari">
         <div className="wrap">
-          <h2 style={{ fontSize: 'var(--step-3)', marginBottom: 24 }}>Alte lucrări</h2>
-          <div className="quote-grid">
+          <div className="head-row">
+            <h2 id="alte-lucrari">Alte lucrări</h2>
+          </div>
+          <div className="sheets is-grid">
             {others.map((p) => (
-              <Link className="quote-card" to={`/proiecte/${p.slug}`} key={p.slug}>
-                <p className="proj-where">
-                  {p.place}, {p.year}
-                </p>
-                <h3 style={{ fontSize: '1.25rem' }}>{p.title}</h3>
-                <p className="small muted">
-                  {p.surface}, {p.duration}, {p.budget}
-                </p>
-              </Link>
+              <ProjectSheet key={p.slug} project={p} />
             ))}
           </div>
         </div>
       </section>
 
-      <CtaBand />
+      <Closing />
     </>
   )
 }

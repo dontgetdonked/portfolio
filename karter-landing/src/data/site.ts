@@ -25,8 +25,6 @@ export function whatsappLink(message: string) {
   return `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(message)}`
 }
 
-export type SceneVariant = 'living' | 'bath' | 'kitchen' | 'villa' | 'facade' | 'office'
-
 export type Service = {
   slug: string
   title: string
@@ -34,7 +32,6 @@ export type Service = {
   price: string
   duration: string
   includes: string[]
-  scene: SceneVariant
 }
 
 export const services: Service[] = [
@@ -51,7 +48,6 @@ export const services: Service[] = [
       'Gletuire, zugrăvire, parchet, uși interioare, plinte',
       'Montaj mobilier, corpuri de iluminat și obiecte sanitare',
     ],
-    scene: 'living',
   },
   {
     slug: 'case-vile',
@@ -66,7 +62,6 @@ export const services: Service[] = [
       'Termosistem, tencuieli decorative, tâmplărie',
       'Finisaje interioare și racorduri la utilități',
     ],
-    scene: 'villa',
   },
   {
     slug: 'bai-bucatarii',
@@ -81,7 +76,6 @@ export const services: Service[] = [
       'Gresie și faianță rectificată, rost continuu, profile de colț',
       'Ventilație mecanică și corpuri de iluminat IP44',
     ],
-    scene: 'bath',
   },
   {
     slug: 'amenajari-interioare',
@@ -96,7 +90,6 @@ export const services: Service[] = [
       'Listă de materiale cu furnizori și prețuri reale',
       'Asistență pe șantier pe toată durata execuției',
     ],
-    scene: 'office',
   },
   {
     slug: 'fatade-termosistem',
@@ -111,7 +104,6 @@ export const services: Service[] = [
       'Tencuială decorativă cu granulație la alegere',
       'Glafuri, burlane, trotuar perimetral',
     ],
-    scene: 'facade',
   },
   {
     slug: 'instalatii',
@@ -126,7 +118,6 @@ export const services: Service[] = [
       'Încălzire în pardoseală cu distribuitor și termostate',
       'Probe de presiune și buletin PRAM la predare',
     ],
-    scene: 'kitchen',
   },
 ]
 
@@ -142,7 +133,6 @@ export type Project = {
   intro: string
   brief: string
   work: string[]
-  scene: SceneVariant
   beforeNote: string
   afterNote: string
   featured: boolean
@@ -169,7 +159,6 @@ export const projects: Project[] = [
       'Parchet stratificat stejar, uși furniruite, gletuire de nivel Q3',
       'Montaj mobilier de bucătărie și dressing pe comandă',
     ],
-    scene: 'living',
     beforeNote: 'Bucătărie închisă, mochetă, tâmplărie de lemn din 1974',
     afterNote: 'Living deschis, parchet stejar, iluminat pe trei circuite',
     featured: true,
@@ -194,7 +183,6 @@ export const projects: Project[] = [
       'Termosistem de 20 cm vată bazaltică, tencuială siliconică',
       'Finisaje interioare complete și încălzire în pardoseală',
     ],
-    scene: 'villa',
     beforeNote: 'Teren în pantă, fără platformă și fără racorduri',
     afterNote: 'Casă finalizată, curte amenajată, racorduri funcționale',
     featured: true,
@@ -218,7 +206,6 @@ export const projects: Project[] = [
       'Gresie rectificată 60×120, rost de 2 mm',
       'Nișă iluminată, ventilație cu senzor de umiditate',
     ],
-    scene: 'bath',
     beforeNote: 'Faianță din 1982, coloană de fontă, cadă fisurată',
     afterNote: 'Duș fără prag, nișă iluminată, ventilație automată',
     featured: true,
@@ -241,7 +228,6 @@ export const projects: Project[] = [
       'Blat de piatră compozită, taiat pe șantier',
       'Recuperator de căldură de perete, montat pe fațadă',
     ],
-    scene: 'kitchen',
     beforeNote: 'Bucătărie de 7 mp, separată de living',
     afterNote: 'Spațiu unit de 23 mp, insulă cu plită',
     featured: false,
@@ -265,7 +251,6 @@ export const projects: Project[] = [
       'Rețea de armare dublată la soclu și la goluri',
       'Tencuială siliconică, glafuri de aluminiu, burlane noi',
     ],
-    scene: 'facade',
     beforeNote: 'Tencuială desprinsă, pete de igrasie pe nord',
     afterNote: 'Termosistem de 15 cm, fațadă uniformă',
     featured: false,
@@ -289,7 +274,6 @@ export const projects: Project[] = [
       'Rețea de date pe fiecare post de lucru',
       'Mochetă în dale și tâmplărie interioară pe comandă',
     ],
-    scene: 'office',
     beforeNote: 'Spațiu la gri, fără compartimentări',
     afterNote: 'Cinci birouri izolate fonic, sală de consultații',
     featured: false,
@@ -357,6 +341,14 @@ export const testimonials: Testimonial[] = [
     text: 'Lucrarea a durat cu o săptămână mai mult din cauza ploilor. Au explicat de ce nu se poate tencui pe umed și au revenit imediat ce s-a uscat. Factura la gaz a scăzut cu o treime.',
   },
 ]
+
+/* The review summary quoted on the home and testimonials pages. */
+export const reviewStats = {
+  average: '4,9',
+  count: 112,
+  since: 2019,
+  recommend: '96%',
+}
 
 export const processSteps = [
   {

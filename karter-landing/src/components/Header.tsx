@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { company } from '@/data/site'
-import { IconClose, IconMenu, IconPhone } from '@/components/icons'
+import { IconArrow, IconClose, IconMenu, IconPhone } from '@/components/icons'
 
 const nav = [
   { to: '/', label: 'Acasă', note: 'Ce facem, pe scurt' },
@@ -9,16 +9,30 @@ const nav = [
   { to: '/proiecte', label: 'Proiecte', note: 'Lucrări predate în Cluj' },
   { to: '/despre', label: 'Despre noi', note: 'Echipa și istoricul firmei' },
   { to: '/testimoniale', label: 'Testimoniale', note: 'Ce spun beneficiarii' },
-  { to: '/contact', label: 'Contact', note: 'Sediu, program, hartă' },
+  { to: '/contact', label: 'Contact', note: 'Sediu, program, date' },
 ]
 
-function Logo() {
+/* The mark is the board in miniature: three chips on a seam, plaster
+   outline, oak and anthracite. */
+export function Mark({ size = 30, dark = false }: { size?: number; dark?: boolean }) {
   return (
-    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden>
-      <rect width="34" height="34" rx="2" fill="#10202b" />
-      <path d="M8 25L17 8l9 17" stroke="#1d5fd6" strokeWidth="2.6" fill="none" strokeLinejoin="round" />
-      <path d="M12.5 25h9" stroke="#edede9" strokeWidth="2.6" strokeLinecap="round" />
+    <svg width={size} height={size} viewBox="0 0 30 30" aria-hidden>
+      <rect x="0" y="0" width="14" height="30" fill={dark ? '#f4f3ef' : '#222426'} />
+      <rect x="16" y="0" width="14" height="14" fill="#b5834a" />
+      <rect x="16.75" y="16.75" width="12.5" height="12.5" fill="none" stroke={dark ? '#f4f3ef' : '#222426'} strokeWidth="1.5" />
     </svg>
+  )
+}
+
+function Brand({ dark = false }: { dark?: boolean }) {
+  return (
+    <Link to="/" className="brand" aria-label="ATRIUM Construct, pagina principală">
+      <Mark dark={dark} />
+      <span className="brand-word">
+        <b>ATRIUM</b>
+        <span>Construct</span>
+      </span>
+    </Link>
   )
 }
 
@@ -68,13 +82,7 @@ export function Header() {
     <>
       <header className={stuck ? 'site-header is-stuck' : 'site-header'}>
         <div className="wrap header-in">
-          <Link to="/" className="brand">
-            <Logo />
-            <span>
-              ATRIUM Construct
-              <small>Renovări și construcții, {company.city}</small>
-            </span>
-          </Link>
+          <Brand />
 
           <nav className="nav" aria-label="Navigare principală">
             {nav.map((item) => (
@@ -96,10 +104,14 @@ export function Header() {
             <Link className="btn btn-sm" to="/oferta">
               Cere ofertă
             </Link>
-            <a className="hdr-phone" href={company.phoneHref} aria-label={`Sună la ${company.phone}`}>
-              <IconPhone />
-            </a>
-            <button ref={burger} className="burger" type="button" onClick={() => setOpen(true)} aria-expanded={open}>
+            <button
+              ref={burger}
+              className="burger"
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-expanded={open}
+              aria-controls="drawer"
+            >
               <IconMenu />
               Meniu
             </button>
@@ -108,12 +120,9 @@ export function Header() {
       </header>
 
       {open && (
-        <div className="drawer" role="dialog" aria-modal="true" aria-label="Meniu">
+        <div className="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Meniu">
           <div className="drawer-top">
-            <Link to="/" className="brand" style={{ color: 'var(--cement)' }}>
-              <Logo />
-              <span>ATRIUM Construct</span>
-            </Link>
+            <Brand dark />
             <button ref={closer} className="drawer-close" type="button" onClick={() => setOpen(false)}>
               <IconClose />
               Închide
@@ -130,8 +139,9 @@ export function Header() {
           <div className="drawer-foot">
             <Link className="btn btn-block" to="/oferta">
               Cere ofertă
+              <IconArrow size={16} />
             </Link>
-            <a className="btn btn-quiet btn-block" href={company.phoneHref}>
+            <a className="btn btn-line btn-block" href={company.phoneHref}>
               <IconPhone />
               {company.phone}
             </a>

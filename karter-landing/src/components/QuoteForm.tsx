@@ -121,12 +121,12 @@ export function QuoteForm() {
 
   if (sent) {
     return (
-      <div className="quote-shell">
+      <div className="form">
         <div className="sent">
           <span className="sent-mark" aria-hidden>
             <IconCheck size={26} />
           </span>
-          <h3>Cererea a ajuns la noi, {data.name.split(' ')[0]}.</h3>
+          <h2>Cererea a ajuns la noi, {data.name.split(' ')[0]}.</h2>
           <p className="lede">
             Te sunăm de pe {company.phone} în maximum o zi lucrătoare, ca să stabilim vizita de
             măsurare. Devizul pe poziții vine în trei zile lucrătoare după vizită.
@@ -163,17 +163,17 @@ export function QuoteForm() {
               </dd>
             </div>
           </dl>
-          <div className="cta-actions">
-            <a className="btn btn-whats" href={whatsappLink(message)} target="_blank" rel="noreferrer">
-              <IconWhatsApp />
+          <div className="actions">
+            <a className="btn btn-line" href={whatsappLink(message)} target="_blank" rel="noreferrer">
+              <IconWhatsApp className="wa" />
               Trimite datele și pe WhatsApp
             </a>
-            <a className="btn btn-quiet" href={company.phoneHref}>
+            <a className="btn btn-line" href={company.phoneHref}>
               <IconPhone />
               Sună acum
             </a>
             <button
-              className="btn btn-quiet"
+              className="btn btn-line"
               type="button"
               onClick={() => {
                 setData(empty)
@@ -190,23 +190,23 @@ export function QuoteForm() {
   }
 
   return (
-    <form className="quote-shell" onSubmit={submit} noValidate>
-      <div className="quote-head">
-        <span className="quote-step-name">
+    <form className="form" onSubmit={submit} noValidate>
+      <div className="form-head">
+        <b aria-live="polite">
           Pasul {step + 1} din 3: {stepNames[step]}
-        </span>
-        <span className="quote-progress" aria-hidden>
+        </b>
+        <span className="steps-bar" aria-hidden>
           {stepNames.map((name, i) => (
-            <i key={name} className={i <= step ? 'is-done' : undefined} />
+            <i key={name} className={i < step ? 'is-done' : i === step ? 'is-now' : undefined} />
           ))}
         </span>
       </div>
 
-      <div className="quote-body">
+      <div className="form-body">
         {step === 0 && (
           <>
             <div className="field">
-              <span id="lbl-type" style={{ fontSize: '0.88rem', fontWeight: 600 }}>
+              <span id="lbl-type" className="group-label">
                 Ce ai de făcut?
               </span>
               <div className="picker" role="group" aria-labelledby="lbl-type">
@@ -289,7 +289,7 @@ export function QuoteForm() {
             </div>
 
             <div className="field">
-              <span id="lbl-extras" style={{ fontSize: '0.88rem', fontWeight: 600 }}>
+              <span id="lbl-extras" className="group-label">
                 Vrei să includem și:
               </span>
               <div className="picker" role="group" aria-labelledby="lbl-extras">
@@ -414,9 +414,9 @@ export function QuoteForm() {
         )}
       </div>
 
-      <div className="quote-foot">
+      <div className="form-foot">
         {step > 0 ? (
-          <button className="btn btn-quiet" type="button" onClick={() => setStep((s) => s - 1)}>
+          <button className="btn btn-line" type="button" onClick={() => setStep((s) => s - 1)}>
             Înapoi
           </button>
         ) : (

@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { processSteps, services } from '@/data/site'
-import { Scene } from '@/components/Scene'
-import { CtaBand, Checklist, Opener, PageHead } from '@/components/ui'
+import { materials, serviceMaterial } from '@/data/media'
+import { Schedule } from '@/components/Schedule'
+import { Checks, Chip, Closing, MaterialTag, PageHead, splitPrice } from '@/components/ui'
+import { IconArrow } from '@/components/icons'
 
 export default function Services() {
   return (
@@ -10,65 +12,68 @@ export default function Services() {
         crumb="Servicii"
         title="Lucrările pe care le facem cu echipe proprii"
         lede="Nu subcontractăm finisajele, instalațiile și fațadele. Asta ține prețul previzibil și pune răspunderea într-un singur loc: la noi."
+        photo="tile"
+        tag={<MaterialTag m={materials.tile} />}
       />
 
-      <section className="band">
-        <div className="wrap stack" style={{ gap: 'clamp(28px, 4vw, 48px)' }}>
-          {services.map((s) => (
-            <article className="proj-strip" key={s.slug} id={s.slug}>
-              <div className="proj-art">
-                <Scene variant={s.scene} state="after" />
-              </div>
-              <div className="proj-body">
-                <h2 style={{ fontSize: 'var(--step-3)' }}>{s.title}</h2>
-                <p className="muted">{s.summary}</p>
-                <Checklist items={s.includes} />
-                <div className="proj-specs">
-                  <div>
-                    <b>{s.price}</b>
-                    <span>preț de pornire</span>
-                  </div>
-                  <div>
-                    <b>{s.duration}</b>
-                    <span>durată obișnuită</span>
-                  </div>
-                  <div>
-                    <b>5 ani</b>
-                    <span>garanție la manoperă</span>
-                  </div>
-                </div>
-                <Link className="btn btn-sm" to="/oferta" style={{ justifySelf: 'start' }}>
-                  Cere deviz pentru {s.title.toLowerCase()}
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="band band-dark band-tight">
+      <section className="section" style={{ paddingTop: 0 }} aria-label="Servicii">
         <div className="wrap">
-          <Opener
-            title="Cum lucrăm"
-            text="Etapa curentă și cea următoare sunt scrise în raportul de vineri, ca să știi mereu unde s-a ajuns."
-          />
-          <ol className="steps">
-            {processSteps.map((s, i) => (
-              <li className="step" key={s.title}>
-                <span className="step-n">{i + 1}</span>
-                <div>
-                  <h4>{s.title}</h4>
-                  <p className="step-when">{s.when}</p>
+          {services.map((s) => {
+            const m = materials[serviceMaterial[s.slug]]
+            const { figure, unit } = splitPrice(s.price)
+            return (
+              <article className="svc" key={s.slug} id={s.slug}>
+                <Chip photo={m.photo} size="third" className="svc-photo">
+                  <MaterialTag m={m} />
+                </Chip>
+                <div className="svc-body">
+                  <h2>{s.title}</h2>
+                  <p className="lede">{s.summary}</p>
+                  <Checks items={s.includes} />
+                  <dl className="facts">
+                    <div>
+                      <dt>preț de pornire{unit && `, ${unit}`}</dt>
+                      <dd className="is-lead">de la {figure}</dd>
+                    </div>
+                    <div>
+                      <dt>durată obișnuită</dt>
+                      <dd>{s.duration}</dd>
+                    </div>
+                    <div>
+                      <dt>garanție la manoperă</dt>
+                      <dd>5 ani</dd>
+                    </div>
+                  </dl>
+                  <div>
+                    <Link className="btn" to="/oferta">
+                      Cere deviz
+                      <IconArrow size={16} />
+                    </Link>
+                  </div>
                 </div>
-                <p>{s.text}</p>
-              </li>
-            ))}
-          </ol>
+              </article>
+            )
+          })}
         </div>
       </section>
 
-      <CtaBand
-        title="Nu ești sigur în ce categorie intră lucrarea ta?"
+      <section className="section field-sunk" aria-labelledby="cum-lucram">
+        <div className="wrap">
+          <div className="head-row">
+            <h2 id="cum-lucram">Cum lucrăm</h2>
+            <div>
+              <p className="muted">
+                Etapa curentă și cea următoare sunt scrise în raportul de vineri, ca să știi mereu unde
+                s-a ajuns.
+              </p>
+            </div>
+          </div>
+          <Schedule steps={processSteps} />
+        </div>
+      </section>
+
+      <Closing
+        title="Nu știi în ce categorie intră lucrarea ta?"
         text="Scrie-ne ce ai de făcut, în cuvintele tale. Noi o încadrăm și îți spunem cât durează și cât costă."
       />
     </>

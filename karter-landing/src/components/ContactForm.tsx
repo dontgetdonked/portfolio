@@ -43,27 +43,27 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <div className="quote-shell">
+      <div className="form">
         <div className="sent">
           <span className="sent-mark" aria-hidden>
             <IconCheck size={26} />
           </span>
-          <h3>Mesajul a plecat spre birou.</h3>
+          <h2>Mesajul a plecat spre birou.</h2>
           <p className="lede">
             Răspundem în aceeași zi lucrătoare, în intervalul {company.hours[0].time}. Dacă e urgent,
             sună direct sau scrie-ne pe WhatsApp.
           </p>
-          <div className="cta-actions">
+          <div className="actions">
             <a
-              className="btn btn-whats"
+              className="btn btn-line"
               href={whatsappLink(`Bună ziua! Am trimis un mesaj pe site: ${data.message}`)}
               target="_blank"
               rel="noreferrer"
             >
-              <IconWhatsApp />
+              <IconWhatsApp className="wa" />
               Continuă pe WhatsApp
             </a>
-            <a className="btn btn-quiet" href={company.phoneHref}>
+            <a className="btn btn-line" href={company.phoneHref}>
               {company.phone}
             </a>
           </div>
@@ -73,12 +73,12 @@ export function ContactForm() {
   }
 
   return (
-    <form className="quote-shell" onSubmit={submit} noValidate>
-      <div className="quote-head">
-        <span className="quote-step-name">Scrie-ne</span>
+    <form className="form" onSubmit={submit} noValidate>
+      <div className="form-head">
+        <b>Scrie-ne</b>
         <span className="small muted">Răspundem în aceeași zi lucrătoare</span>
       </div>
-      <div className="quote-body">
+      <div className="form-body">
         <div className="form-grid">
           <label className={errors.name ? 'field has-error' : 'field'}>
             <span>Nume și prenume</span>
@@ -132,7 +132,7 @@ export function ContactForm() {
           </span>
         </label>
       </div>
-      <div className="quote-foot">
+      <div className="form-foot">
         <span className="small muted">Pentru ofertă completă, folosește formularul de ofertă.</span>
         <button className="btn" type="submit">
           Trimite mesajul

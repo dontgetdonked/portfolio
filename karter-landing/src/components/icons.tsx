@@ -1,5 +1,5 @@
-/* Line icons, drawn on a 24px grid with a 1.7px stroke so they sit next to
-   Archivo's stem weight without shouting. */
+/* Line icons on a 24px grid, square caps and mitred joins, so they match the
+   cut edges of the sample chips rather than rounded app icons. */
 type IconProps = { size?: number; className?: string }
 
 const base = (size: number) => ({
@@ -8,9 +8,9 @@ const base = (size: number) => ({
   viewBox: '0 0 24 24',
   fill: 'none',
   stroke: 'currentColor',
-  strokeWidth: 1.7,
-  strokeLinecap: 'round' as const,
-  strokeLinejoin: 'round' as const,
+  strokeWidth: 1.8,
+  strokeLinecap: 'square' as const,
+  strokeLinejoin: 'miter' as const,
   'aria-hidden': true,
 })
 
@@ -80,22 +80,6 @@ export function IconWhatsApp({ size = 20, className }: IconProps) {
   )
 }
 
-export function IconStar({ size = 15, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
-      <path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.45 6.19 20.5 7.3 14.03 2.6 9.45l6.5-.95z" />
-    </svg>
-  )
-}
-
-export function IconDrag({ size = 18, className }: IconProps) {
-  return (
-    <svg {...base(size)} className={className}>
-      <path d="M9 7l-4 5 4 5M15 7l4 5-4 5" />
-    </svg>
-  )
-}
-
 export function IconMenu({ size = 18, className }: IconProps) {
   return (
     <svg {...base(size)} className={className}>
@@ -108,6 +92,14 @@ export function IconClose({ size = 18, className }: IconProps) {
   return (
     <svg {...base(size)} className={className}>
       <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  )
+}
+
+export function IconArrow({ size = 18, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path d="M4 12h15M13 6l6 6-6 6" />
     </svg>
   )
 }
