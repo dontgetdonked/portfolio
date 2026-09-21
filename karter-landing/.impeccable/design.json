@@ -1,0 +1,854 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T13:00:00Z",
+  "title": "Design System: ATRIUM Construct",
+  "extensions": {
+    "colorMeta": {
+      "plaster": {
+        "role": "neutral",
+        "displayName": "Lime Plaster",
+        "canonical": "#e4e2dc",
+        "oklch": "oklch(91.3% 0.008 91)",
+        "tonalRamp": [
+          "#0c0b07",
+          "#252420",
+          "#41403b",
+          "#5f5d58",
+          "#7f7d78",
+          "#a09e99",
+          "#c6c4be",
+          "#f0eee8"
+        ],
+        "cssVar": "--plaster"
+      },
+      "plaster-2": {
+        "role": "neutral",
+        "displayName": "Sunk Plaster",
+        "canonical": "#d9d6ce",
+        "oklch": "oklch(87.6% 0.011 90)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#424039",
+          "#605d56",
+          "#807d76",
+          "#a19e97",
+          "#c7c4bc",
+          "#f1eee6"
+        ],
+        "cssVar": "--plaster-2"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f4f3ef",
+        "oklch": "oklch(96.4% 0.005 95)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403d",
+          "#5e5e5a",
+          "#7e7d7a",
+          "#9f9e9b",
+          "#c5c4c0",
+          "#efeeea"
+        ],
+        "cssVar": "--paper"
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "cssVar": "--white"
+      },
+      "anthracite": {
+        "role": "neutral",
+        "displayName": "Anthracite",
+        "canonical": "#222426",
+        "oklch": "oklch(25.9% 0.005 248)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#222426",
+          "#3e4042",
+          "#5b5e60",
+          "#7b7d80",
+          "#9c9fa1",
+          "#c2c4c7",
+          "#eceff2"
+        ],
+        "cssVar": "--anthracite"
+      },
+      "anthracite-2": {
+        "role": "neutral",
+        "displayName": "Anthracite 2 (raised on dark)",
+        "canonical": "#2d3032",
+        "oklch": "oklch(30.7% 0.006 237)",
+        "tonalRamp": [
+          "#090c0d",
+          "#222426",
+          "#3d4042",
+          "#5b5e60",
+          "#7a7e80",
+          "#9b9fa1",
+          "#c1c5c7",
+          "#ebeff2"
+        ],
+        "cssVar": "--anthracite-2"
+      },
+      "anthracite-3": {
+        "role": "neutral",
+        "displayName": "Anthracite 3 (seam on dark)",
+        "canonical": "#3a3d40",
+        "oklch": "oklch(35.8% 0.007 248)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3d4043",
+          "#5b5e61",
+          "#7a7e81",
+          "#9b9fa2",
+          "#c1c4c8",
+          "#ebeff3"
+        ],
+        "cssVar": "--anthracite-3"
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#505356",
+        "oklch": "oklch(44.1% 0.006 248)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3d4043",
+          "#5b5e61",
+          "#7a7e81",
+          "#9b9fa2",
+          "#c1c4c8",
+          "#ebeff3"
+        ],
+        "cssVar": "--graphite"
+      },
+      "graphite-deep": {
+        "role": "neutral",
+        "displayName": "Graphite Deep",
+        "canonical": "#45484b",
+        "oklch": "oklch(40.0% 0.006 248)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3d4043",
+          "#5b5e61",
+          "#7a7e81",
+          "#9b9fa2",
+          "#c1c4c8",
+          "#ebeff3"
+        ],
+        "cssVar": "--graphite-deep"
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Grey",
+        "canonical": "#74777a",
+        "oklch": "oklch(56.8% 0.006 248)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3d4043",
+          "#5b5e61",
+          "#7b7e81",
+          "#9c9fa2",
+          "#c1c4c8",
+          "#ebeff2"
+        ],
+        "cssVar": "--placeholder"
+      },
+      "concrete": {
+        "role": "neutral",
+        "displayName": "Concrete",
+        "canonical": "#8f918d",
+        "oklch": "oklch(65.4% 0.006 129)",
+        "tonalRamp": [
+          "#0a0c09",
+          "#232521",
+          "#3f403d",
+          "#5c5e5b",
+          "#7c7e7a",
+          "#9d9f9b",
+          "#c3c5c1",
+          "#edefeb"
+        ],
+        "cssVar": "--concrete"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#c4c1b9",
+        "oklch": "oklch(81.1% 0.012 90)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#424039",
+          "#605d56",
+          "#807d76",
+          "#a19e96",
+          "#c7c4bc",
+          "#f1eee6"
+        ],
+        "cssVar": "--rule"
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong",
+        "canonical": "#a3a098",
+        "oklch": "oklch(70.6% 0.012 90)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#424039",
+          "#605d56",
+          "#807d75",
+          "#a19e96",
+          "#c7c4bc",
+          "#f1eee6"
+        ],
+        "cssVar": "--rule-strong"
+      },
+      "edge": {
+        "role": "neutral",
+        "displayName": "Edge",
+        "canonical": "#7d7a73",
+        "oklch": "oklch(58.0% 0.011 88)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#423f39",
+          "#605d57",
+          "#807d76",
+          "#a19e97",
+          "#c7c4bc",
+          "#f2eee6"
+        ],
+        "cssVar": "--edge"
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Rule Dark",
+        "canonical": "rgba(244, 243, 239, 0.16)",
+        "note": "Paper at 16% over anthracite; divider on dark fields.",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403d",
+          "#5e5e5a",
+          "#7e7d7a",
+          "#9f9e9b",
+          "#c5c4c0",
+          "#efeeea"
+        ],
+        "cssVar": "--rule-dark"
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "On Dark",
+        "canonical": "#f4f3ef",
+        "oklch": "oklch(96.4% 0.005 95)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403d",
+          "#5e5e5a",
+          "#7e7d7a",
+          "#9f9e9b",
+          "#c5c4c0",
+          "#efeeea"
+        ],
+        "cssVar": "--on-dark"
+      },
+      "on-dark-2": {
+        "role": "neutral",
+        "displayName": "On Dark 2",
+        "canonical": "#b9bab6",
+        "oklch": "oklch(78.7% 0.006 118)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#3f403d",
+          "#5d5e5a",
+          "#7d7e7a",
+          "#9e9f9b",
+          "#c4c5c0",
+          "#eeefeb"
+        ],
+        "cssVar": "--on-dark-2"
+      },
+      "oak": {
+        "role": "secondary",
+        "displayName": "Oak",
+        "canonical": "#b5834a",
+        "oklch": "oklch(64.8% 0.096 68)",
+        "tonalRamp": [
+          "#140800",
+          "#351e00",
+          "#5b3601",
+          "#815213",
+          "#a37238",
+          "#c6935a",
+          "#eeb97f",
+          "#feebd7"
+        ],
+        "cssVar": "--oak"
+      },
+      "oak-deep": {
+        "role": "secondary",
+        "displayName": "Oak Deep",
+        "canonical": "#74491d",
+        "oklch": "oklch(44.6% 0.083 63)",
+        "tonalRamp": [
+          "#150700",
+          "#371d00",
+          "#5e3402",
+          "#7e5227",
+          "#a07247",
+          "#c39368",
+          "#ebb98c",
+          "#feebda"
+        ],
+        "cssVar": "--oak-deep"
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ballpoint Blue",
+        "canonical": "#2433b8",
+        "oklch": "oklch(41.3% 0.205 269)",
+        "tonalRamp": [
+          "#030034",
+          "#0e0075",
+          "#1c22a9",
+          "#324acf",
+          "#4d6ef5",
+          "#7797fe",
+          "#acc2ff",
+          "#e8eeff"
+        ],
+        "cssVar": "--ink"
+      },
+      "ink-deep": {
+        "role": "primary",
+        "displayName": "Deep Ballpoint",
+        "canonical": "#1a258c",
+        "oklch": "oklch(33.9% 0.167 269)",
+        "tonalRamp": [
+          "#030034",
+          "#0e0373",
+          "#202f96",
+          "#3951ba",
+          "#5673df",
+          "#7897fe",
+          "#adc2ff",
+          "#e8eeff"
+        ],
+        "cssVar": "--ink-deep"
+      },
+      "ink-wash": {
+        "role": "primary",
+        "displayName": "Ink Wash",
+        "canonical": "#e3e5f6",
+        "oklch": "oklch(92.5% 0.023 281)",
+        "tonalRamp": [
+          "#090a15",
+          "#22232f",
+          "#3d3f4c",
+          "#5b5c6b",
+          "#7a7c8b",
+          "#9b9dad",
+          "#c1c3d3",
+          "#ebedfe"
+        ],
+        "cssVar": "--ink-wash"
+      },
+      "ink-light": {
+        "role": "primary",
+        "displayName": "Ink Light",
+        "canonical": "#9aa6ff",
+        "oklch": "oklch(75.1% 0.129 277)",
+        "tonalRamp": [
+          "#070031",
+          "#1a1260",
+          "#323382",
+          "#4d53a4",
+          "#6b74c8",
+          "#8b96ed",
+          "#b5bffe",
+          "#eaedfe"
+        ],
+        "cssVar": "--ink-light"
+      },
+      "alert": {
+        "role": "functional",
+        "displayName": "Alert",
+        "canonical": "#a8261c",
+        "oklch": "oklch(48.1% 0.168 29)",
+        "tonalRamp": [
+          "#1f0000",
+          "#4b0100",
+          "#7d0000",
+          "#a8261c",
+          "#ce4c3d",
+          "#f56f5e",
+          "#feac9f",
+          "#fee9e5"
+        ],
+        "cssVar": "--alert"
+      },
+      "whatsapp": {
+        "role": "functional",
+        "displayName": "WhatsApp Green",
+        "canonical": "#1c8f4d",
+        "oklch": "oklch(57.3% 0.140 152)",
+        "tonalRamp": [
+          "#001004",
+          "#002d12",
+          "#014e25",
+          "#047138",
+          "#249452",
+          "#4eb772",
+          "#77de97",
+          "#c7ffd5"
+        ],
+        "cssVar": "--whatsapp"
+      },
+      "whatsapp-light": {
+        "role": "functional",
+        "displayName": "WhatsApp Light",
+        "canonical": "#5fd08d",
+        "oklch": "oklch(77.4% 0.142 155)",
+        "tonalRamp": [
+          "#001005",
+          "#002d16",
+          "#024d2a",
+          "#01703f",
+          "#0f9556",
+          "#44b876",
+          "#6fdf9b",
+          "#c5ffd8"
+        ],
+        "cssVar": "--whatsapp-light"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero H1 only; uppercase, max 14ch; 0.96 leading so Ș/Ț clear the next line.",
+        "cssVar": "--t-hero"
+      },
+      "headline-page": {
+        "displayName": "Headline Page",
+        "purpose": "Inner page-head H1; uppercase, max 16ch.",
+        "cssVar": "--t-page"
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s; uppercase.",
+        "cssVar": "--t-h2"
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Contract-clause figures; same face at 850 sets schedule numbers, timeline years, the closing phone and the review score.",
+        "cssVar": "--t-figure"
+      },
+      "figure-sm": {
+        "displayName": "Figure Small",
+        "purpose": "Lead value in a spec group: contract value, starting price."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "H3/H4, service names, stage names, FAQ questions.",
+        "cssVar": "--t-h3"
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Values in ledgers and spec lists; tabular."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under a section heading; graphite.",
+        "cssVar": "--t-lede"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, max 68ch.",
+        "cssVar": "--t-body"
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Notes, summaries, captions.",
+        "cssVar": "--t-small"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons and controls; uppercase."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Place and year, breadcrumbs, contact-line labels; graphite."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Paper tag text; code at 800 +0.04em, spec in graphite.",
+        "cssVar": "--t-tag"
+      }
+    },
+    "shadows": [
+      {
+        "name": "tag-lift",
+        "value": "0 1px 2px rgba(34, 36, 38, 0.18)",
+        "purpose": "Paper tag hanging on a photo chip."
+      },
+      {
+        "name": "handle",
+        "value": "0 6px 18px -6px rgba(0, 0, 0, 0.45)",
+        "purpose": "White square handle on the wall-section cut line."
+      },
+      {
+        "name": "floating-tag",
+        "value": "0 10px 28px -12px rgba(0, 0, 0, 0.55)",
+        "purpose": "Desktop WhatsApp tag fixed to the lower-right corner."
+      },
+      {
+        "name": "cut-edge",
+        "value": "linear-gradient(90deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0)) 10px wide",
+        "purpose": "Shadow each peeled wall layer throws at its cut."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #ffffff; outline-offset: 2px; box-shadow: 0 0 0 5px #222426",
+        "purpose": "Double ring on every focusable element except text fields."
+      },
+      {
+        "name": "focus-field",
+        "value": "border-color: #2433b8; box-shadow: 0 0 0 3px #e3e5f6",
+        "purpose": "Focus on text inputs, selects, textareas."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Everything that arrives or responds: link arrows, nav underline, drawer, chip placement, photo settle and hover zoom, FAQ.",
+        "cssVar": "--ease-out"
+      },
+      {
+        "name": "ease-peel",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Wall layers moving to a set depth (0.7s).",
+        "cssVar": "--ease-peel"
+      },
+      {
+        "name": "duration-color",
+        "value": "0.2s",
+        "purpose": "Colour, border and background changes."
+      },
+      {
+        "name": "duration-ui",
+        "value": "0.3s–0.4s",
+        "purpose": "Arrow nudge, nav underline, drawer clip, FAQ open."
+      },
+      {
+        "name": "duration-peel",
+        "value": "0.7s",
+        "purpose": "Wall layer jump when a layer button is pressed."
+      },
+      {
+        "name": "duration-place",
+        "value": "0.9s",
+        "purpose": "Hero chip clip reveal; photo hover zoom."
+      },
+      {
+        "name": "duration-settle",
+        "value": "1.4s",
+        "purpose": "Hero photo scale 1.08 to 1."
+      },
+      {
+        "name": "stagger-place",
+        "value": "90ms per chip + 120ms",
+        "purpose": "Hero chips placed in order."
+      },
+      {
+        "name": "auto-peel",
+        "value": "2200ms ease-in-out cubic, once, at 45% in view",
+        "purpose": "The one authored moment: the wall peels itself from finish to masonry."
+      },
+      {
+        "name": "schedule-grow",
+        "value": "scroll-driven view() timeline, entry 10% to cover 35%",
+        "purpose": "Schedule bars scale in from the left."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all animation and transition durations 0.01ms",
+        "purpose": "prefers-reduced-motion: reduce; wall starts fully peeled."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px",
+        "purpose": "Hero WhatsApp button regains \"Scrie pe\"."
+      },
+      {
+        "name": "facts-stack",
+        "value": "520px (max)",
+        "purpose": "Service facts stack."
+      },
+      {
+        "name": "picker",
+        "value": "560px",
+        "purpose": "Form choice tiles two-up."
+      },
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Hero padding and note, price tag inline, form grid two-up."
+      },
+      {
+        "name": "roster",
+        "value": "760px",
+        "purpose": "Roster, timeline, footer two-column."
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "purpose": "Action bar gives way to the floating WhatsApp tag; header CTA shows."
+      },
+      {
+        "name": "lg",
+        "value": "900px",
+        "purpose": "Price list table, sheets board, page-head split, ledger five-up."
+      },
+      {
+        "name": "xl",
+        "value": "1024px",
+        "purpose": "Hero 12-column board; wall section, clauses, schedule, FAQ, closing, contact two-column."
+      },
+      {
+        "name": "footer",
+        "value": "1100px",
+        "purpose": "Footer four-column."
+      },
+      {
+        "name": "nav",
+        "value": "1180px",
+        "purpose": "Full nav and phone replace the burger."
+      },
+      {
+        "name": "chip-cq-md",
+        "value": "340px (container, max)",
+        "purpose": "Tag spec wraps to a second line."
+      },
+      {
+        "name": "chip-cq-sm",
+        "value": "150px (container, max)",
+        "purpose": "Tag reduced to code only."
+      }
+    ],
+    "fonts": {
+      "source": "@fontsource-variable (imported in src/main.tsx)",
+      "families": [
+        "Sofia Sans Variable",
+        "Sofia Sans Condensed Variable",
+        "Sofia Sans Extra Condensed Variable"
+      ],
+      "cssVars": {
+        "--display": "Extra Condensed",
+        "--cond": "Condensed",
+        "--text": "regular width"
+      }
+    },
+    "layoutTokens": {
+      "--wrap": "1320px",
+      "--gutter": "clamp(16px, 4vw, 48px)",
+      "--seam": "6px",
+      "--section": "clamp(72px, 9vw, 136px)",
+      "--header-h": "64px (58px below 768px)",
+      "--bar-h": "0px (60px below 768px)"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button (ballpoint)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Every request action: Cere ofertă, Cere deviz, Continuă, Trimite cererea. The only filled blue control.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Cere ofertă <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 22px; border: 1.5px solid transparent; border-radius: 2px; font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 1rem; letter-spacing: 0.035em; text-transform: uppercase; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); background: var(--ink, #2433b8); color: var(--white, #ffffff); text-decoration: none; } .ds-btn:hover { background: var(--ink-deep, #1a258c); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 3px solid var(--white, #ffffff); outline-offset: 2px; box-shadow: 0 0 0 5px var(--anthracite, #222426); }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "WhatsApp, phone and Back. Anthracite border; fills anthracite on hover; WhatsApp glyph green at rest.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\"><span class=\"ds-wa\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.55 3.75 1.5 5.29L2 22l5-1.63a9.8 9.8 0 005.04 1.39h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2zm0 17.98h-.01a8.2 8.2 0 01-4.16-1.14l-.3-.18-3.09 1 1.02-3-.19-.31a8.13 8.13 0 01-1.25-4.35c0-4.5 3.67-8.16 8.19-8.16a8.16 8.16 0 018.17 8.17c0 4.5-3.67 8.17-8.18 8.17zm4.49-6.11c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z\"/></svg></span>Scrie pe WhatsApp</a>",
+      "css": ".ds-btn-line { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 22px; border: 1.5px solid transparent; border-radius: 2px; font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 1rem; letter-spacing: 0.035em; text-transform: uppercase; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); background: transparent; border-color: var(--anthracite, #222426); color: var(--anthracite, #222426); text-decoration: none; } .ds-btn-line .ds-wa { display: inline-flex; color: var(--whatsapp, #1c8f4d); transition: color 0.2s; } .ds-btn-line:hover { background: var(--anthracite, #222426); color: var(--on-dark, #f4f3ef); } .ds-btn-line:hover .ds-wa { color: currentColor; } .ds-btn-line:active { transform: translateY(1px); } .ds-btn-line:focus-visible { outline: 3px solid var(--white, #ffffff); outline-offset: 2px; box-shadow: 0 0 0 5px var(--anthracite, #222426); }"
+    },
+    {
+      "name": "Material Chip with Paper Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "A square-cut sample on the board with its paper tag pinned at the lower left: eyelet, code, name, spec.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-chip ds-oak\"><span class=\"ds-tag\"><b>M-01</b>Parchet stratificat stejar<span class=\"ds-spec\">lăcuit, montat pe folie</span></span></div><div class=\"ds-chip ds-stone\"><span class=\"ds-tag\"><b>M-03</b>Piatră compozită</span></div></div>",
+      "css": ".ds-board { display: grid; grid-template-columns: 3fr 2fr; gap: 6px; padding: 6px; background: var(--plaster, #e4e2dc); } .ds-chip { position: relative; min-height: 220px; background: var(--plaster-2, #d9d6ce); } .ds-oak { background: linear-gradient(100deg, #9a6a36 0 12%, #b5834a 12% 30%, #a8773f 30% 52%, #c29058 52% 74%, #a06f3a 74%); } .ds-stone { background: radial-gradient(circle at 30% 30%, #efece6, #cfcbc2 60%, #bdb8ae); } .ds-tag { position: absolute; left: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 6px 11px 6px 24px; background: var(--paper, #f4f3ef); color: var(--anthracite, #222426); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-size: 0.8125rem; font-weight: 560; line-height: 1.25; box-shadow: 0 1px 2px rgba(34, 36, 38, 0.18); } .ds-tag::before { content: ''; position: absolute; left: 9px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border: 1.5px solid var(--concrete, #8f918d); border-radius: 50%; box-sizing: border-box; } .ds-tag b { margin-right: 7px; font-weight: 800; letter-spacing: 0.04em; } .ds-spec { margin-left: 7px; color: var(--graphite, #505356); }"
+    },
+    {
+      "name": "Price Tag",
+      "kind": "custom",
+      "refersTo": "price-tag",
+      "description": "The one-line estimate slip under the hero board: three facts, the figure in Extra Condensed 850.",
+      "html": "<p class=\"ds-price-tag\"><span>Renovare completă de apartament: <strong>de la 420 €/mp</strong></span><span>deviz pe poziții în 3 zile lucrătoare</span><span>garanție 5 ani la manoperă</span></p>",
+      "css": ".ds-price-tag { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0; padding: 12px 18px; background: var(--paper, #f4f3ef); border: 1px solid var(--rule, #c4c1b9); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-size: 0.98rem; font-weight: 600; line-height: 1.35; color: var(--graphite, #505356); } .ds-price-tag > span { display: inline-flex; align-items: baseline; gap: 6px; } .ds-price-tag > span + span::before { content: ''; width: 1px; height: 0.9em; margin: 0 14px; background: var(--rule-strong, #a3a098); align-self: center; } .ds-price-tag strong { font-family: var(--display, 'Sofia Sans Extra Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 850; font-size: 1.55rem; line-height: 1; color: var(--anthracite, #222426); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Price List Row",
+      "kind": "custom",
+      "refersTo": "chip",
+      "description": "A supplier price-list ledger row: code-tagged thumbnail, service, summary, starting price.",
+      "html": "<ol class=\"ds-pl\"><li class=\"ds-pl-row\"><div class=\"ds-pl-chip\"><span class=\"ds-pl-code\">M-02</span></div><div><h3 class=\"ds-pl-title\"><a href=\"#\">Băi și bucătării</a></h3><p class=\"ds-pl-sum\">Refacem hidroizolația, trasăm instalațiile după mobilier și tăiem faianța pe rost continuu.</p></div><div class=\"ds-pl-meta\"><span class=\"ds-pl-from\">de la</span><span class=\"ds-pl-price\">3.400 €</span><span class=\"ds-pl-dur\">per baie, 3 – 5 săptămâni</span></div></li></ol>",
+      "css": ".ds-pl { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--anthracite, #222426); background: var(--plaster, #e4e2dc); color: var(--anthracite, #222426); } .ds-pl-row { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--rule, #c4c1b9); align-items: center; } .ds-pl-chip { position: relative; aspect-ratio: 1; background: linear-gradient(90deg, #cfd0cb 0 49%, #8f918d 49% 50%, #cfd0cb 50%), #cfd0cb; } .ds-pl-code { position: absolute; left: 6px; bottom: 6px; padding: 3px 7px 3px 18px; background: var(--paper, #f4f3ef); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; box-shadow: 0 1px 2px rgba(34, 36, 38, 0.18); } .ds-pl-code::before { content: ''; position: absolute; left: 6px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border: 1.5px solid var(--concrete, #8f918d); border-radius: 50%; box-sizing: border-box; } .ds-pl-title { margin: 0 0 6px; font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 700; font-size: 1.4rem; line-height: 1.12; } .ds-pl-title a { color: inherit; text-decoration: none; } .ds-pl-title a:hover { text-decoration: underline; text-decoration-color: var(--rule-strong, #a3a098); } .ds-pl-sum { margin: 0; font-family: var(--text, 'Sofia Sans Variable', system-ui, sans-serif); font-size: 0.9375rem; line-height: 1.5; color: var(--graphite, #505356); } .ds-pl-meta { display: grid; justify-items: end; text-align: right; } .ds-pl-from { font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 650; font-size: 0.85rem; color: var(--graphite, #505356); } .ds-pl-price { font-family: var(--display, 'Sofia Sans Extra Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 850; font-size: 2rem; line-height: 1; font-variant-numeric: tabular-nums; } .ds-pl-dur { font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 600; font-size: 0.95rem; color: var(--graphite, #505356); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field, Rule Strong border, 2px radius; focus turns the border ink with an Ink Wash ring; error in alert.",
+      "html": "<div class=\"ds-form\"><label class=\"ds-field\"><span>Suprafața aproximativă (mp)</span><input type=\"text\" placeholder=\"ex. 74\"><span class=\"ds-hint\">Dacă nu o știi exact, scrie o estimare.</span></label><label class=\"ds-field ds-err\"><span>Telefon</span><input type=\"text\" value=\"0721\" aria-invalid=\"true\"><span class=\"ds-error\">Scrie un număr de telefon valid.</span></label></div>",
+      "css": ".ds-form { display: grid; gap: 18px; padding: 24px; background: var(--paper, #f4f3ef); border: 1px solid var(--rule, #c4c1b9); color: var(--anthracite, #222426); } .ds-field { display: grid; gap: 7px; } .ds-field > span:first-child { font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 700; font-size: 0.98rem; } .ds-field input { width: 100%; box-sizing: border-box; min-height: 50px; padding: 12px 14px; border: 1.5px solid var(--edge, #7d7a73); border-radius: 2px; background: var(--white, #ffffff); color: inherit; font-family: var(--text, 'Sofia Sans Variable', system-ui, sans-serif); font-size: 1rem; caret-color: var(--ink, #2433b8); transition: border-color 0.2s, box-shadow 0.2s; } .ds-field input::placeholder { color: var(--placeholder, #74777a); } .ds-field input:hover { border-color: var(--anthracite, #222426); } .ds-field input:focus { outline: none; border-color: var(--ink, #2433b8); box-shadow: 0 0 0 3px var(--ink-wash, #e3e5f6); } .ds-err input { border-color: var(--alert, #a8261c); } .ds-hint { font-family: var(--text, 'Sofia Sans Variable', system-ui, sans-serif); font-size: 0.9rem; color: var(--graphite, #505356); } .ds-error { font-family: var(--text, 'Sofia Sans Variable', system-ui, sans-serif); font-size: 0.9rem; font-weight: 600; color: var(--alert, #a8261c); }"
+    },
+    {
+      "name": "Choice Tile and Step Bar",
+      "kind": "input",
+      "refersTo": "pick-selected",
+      "description": "Form head with the three-segment step bar (ink = current step) over pressable choice tiles; a selected tile fills its box with ink.",
+      "html": "<div class=\"ds-q\"><div class=\"ds-q-head\"><b>Pasul 1 din 3: Lucrarea</b><span class=\"ds-steps\"><i class=\"ds-now\"></i><i></i><i></i></span></div><div class=\"ds-picker\"><button type=\"button\" class=\"ds-pick\" aria-pressed=\"true\"><span class=\"ds-box\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12.5l5 5L20 6.5\"/></svg></span><span><b>Renovare completă</b><span>apartament sau casă</span></span></button><button type=\"button\" class=\"ds-pick\" aria-pressed=\"false\"><span class=\"ds-box\"></span><span><b>Baie sau bucătărie</b><span>o singură încăpere</span></span></button></div></div>",
+      "css": ".ds-q { background: var(--paper, #f4f3ef); border: 1px solid var(--rule, #c4c1b9); color: var(--anthracite, #222426); } .ds-q-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 24px; border-bottom: 1px solid var(--rule, #c4c1b9); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 800; font-size: 1.05rem; } .ds-steps { display: flex; gap: 4px; } .ds-steps i { width: 38px; height: 8px; background: var(--rule, #c4c1b9); } .ds-steps i.ds-done { background: var(--anthracite, #222426); } .ds-steps i.ds-now { background: var(--ink, #2433b8); } .ds-picker { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 24px; } .ds-pick { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; padding: 13px 14px; border: 1.5px solid var(--edge, #7d7a73); border-radius: 2px; background: transparent; color: inherit; text-align: left; font: inherit; cursor: pointer; transition: border-color 0.2s, background-color 0.2s; } .ds-pick:hover { border-color: var(--anthracite, #222426); } .ds-pick[aria-pressed='true'] { border-color: var(--anthracite, #222426); background: var(--white, #ffffff); } .ds-pick:focus-visible { outline: 3px solid var(--white, #ffffff); outline-offset: 2px; box-shadow: 0 0 0 5px var(--anthracite, #222426); } .ds-box { width: 22px; height: 22px; box-sizing: border-box; display: grid; place-items: center; border: 1.5px solid var(--anthracite, #222426); color: var(--white, #ffffff); } .ds-pick[aria-pressed='true'] .ds-box { background: var(--ink, #2433b8); border-color: var(--ink, #2433b8); } .ds-pick b { display: block; font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 1.02rem; line-height: 1.25; } .ds-pick span span { display: block; font-family: var(--text, 'Sofia Sans Variable', system-ui, sans-serif); font-size: 0.88rem; color: var(--graphite, #505356); }"
+    },
+    {
+      "name": "Header and Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky plaster strip: three-chip mark and wordmark, condensed nav with a scaling anthracite underline, phone, small ballpoint CTA.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-brand\" href=\"#\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" aria-hidden=\"true\"><rect x=\"0\" y=\"0\" width=\"14\" height=\"30\" fill=\"#222426\"/><rect x=\"16\" y=\"0\" width=\"14\" height=\"14\" fill=\"#b5834a\"/><rect x=\"16.75\" y=\"16.75\" width=\"12.5\" height=\"12.5\" fill=\"none\" stroke=\"#222426\" stroke-width=\"1.5\"/></svg><span class=\"ds-word\"><b>ATRIUM</b><span>Construct</span></span></a><nav class=\"ds-nav\"><a href=\"#\" class=\"ds-active\">Acasă</a><a href=\"#\">Servicii</a><a href=\"#\">Proiecte</a><a href=\"#\">Contact</a></nav><a class=\"ds-phone\" href=\"#\">+40 721 448 209</a><a class=\"ds-cta\" href=\"#\">Cere ofertă</a></header>",
+      "css": ".ds-header { display: flex; align-items: center; gap: 24px; height: 64px; padding: 0 24px; background: var(--plaster, #e4e2dc); border-bottom: 1px solid var(--rule, #c4c1b9); color: var(--anthracite, #222426); } .ds-brand { display: inline-flex; align-items: center; gap: 11px; color: inherit; text-decoration: none; } .ds-word { display: grid; line-height: 0.86; } .ds-word b { font-family: var(--display, 'Sofia Sans Extra Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 860; font-size: 1.62rem; letter-spacing: 0.01em; } .ds-word span { font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 650; font-size: 0.69rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--graphite, #505356); } .ds-nav { display: flex; gap: 4px; margin-left: auto; } .ds-nav a { position: relative; padding: 8px 11px; font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 650; font-size: 0.97rem; letter-spacing: 0.02em; color: var(--graphite, #505356); text-decoration: none; transition: color 0.2s; } .ds-nav a::after { content: ''; position: absolute; left: 11px; right: 11px; bottom: 2px; height: 2px; background: var(--anthracite, #222426); transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav a:hover, .ds-nav a.ds-active { color: var(--anthracite, #222426); } .ds-nav a:hover::after, .ds-nav a.ds-active::after { transform: scaleX(1); } .ds-nav a:focus-visible, .ds-cta:focus-visible { outline: 3px solid var(--white, #ffffff); outline-offset: 2px; box-shadow: 0 0 0 5px var(--anthracite, #222426); } .ds-phone { font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 1.02rem; font-variant-numeric: tabular-nums; color: inherit; text-decoration: none; white-space: nowrap; } .ds-cta { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 2px; background: var(--ink, #2433b8); color: var(--white, #ffffff); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 0.9375rem; letter-spacing: 0.035em; text-transform: uppercase; text-decoration: none; transition: background-color 0.2s; } .ds-cta:hover { background: var(--ink-deep, #1a258c); }"
+    },
+    {
+      "name": "Mobile Action Bar",
+      "kind": "nav",
+      "refersTo": "action-bar",
+      "description": "Below 768px: call, WhatsApp and the ballpoint \"Cere ofertă\" cell under the thumb, on 1px anthracite-3 seams.",
+      "html": "<nav class=\"ds-bar\" aria-label=\"Contact rapid\"><a href=\"#\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M6.5 3.5h3l1.5 4-2 1.5a12 12 0 006 6l1.5-2 4 1.5v3a2 2 0 01-2.2 2A17 17 0 014.5 5.7a2 2 0 012-2.2z\"/></svg>Sună</a><a href=\"#\"><span class=\"ds-wa\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.94.55 3.75 1.5 5.29L2 22l5-1.63a9.8 9.8 0 005.04 1.39h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2zm0 17.98h-.01a8.2 8.2 0 01-4.16-1.14l-.3-.18-3.09 1 1.02-3-.19-.31a8.13 8.13 0 01-1.25-4.35c0-4.5 3.67-8.16 8.19-8.16a8.16 8.16 0 018.17 8.17c0 4.5-3.67 8.17-8.18 8.17zm4.49-6.11c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z\"/></svg></span>WhatsApp</a><a href=\"#\" class=\"ds-main\">Cere ofertă</a></nav>",
+      "css": ".ds-bar { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 1px; max-width: 390px; background: var(--anthracite-3, #3a3d40); border-top: 1px solid var(--anthracite-3, #3a3d40); } .ds-bar a { height: 60px; display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--anthracite, #222426); color: var(--on-dark, #f4f3ef); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 0.95rem; letter-spacing: 0.03em; text-transform: uppercase; text-decoration: none; } .ds-bar .ds-wa { display: inline-flex; color: var(--whatsapp-light, #5fd08d); } .ds-bar a.ds-main { background: var(--ink, #2433b8); color: var(--white, #ffffff); } .ds-bar a:focus-visible { outline: 3px solid var(--white, #ffffff); outline-offset: 2px; box-shadow: 0 0 0 5px var(--anthracite, #222426); position: relative; z-index: 1; }"
+    },
+    {
+      "name": "Wall Section (static, fully peeled)",
+      "kind": "custom",
+      "refersTo": "wall-handle",
+      "description": "The signature: four layers stepped in 25% bands (masonry, services scheme, render, finish), cut-edge shadows, white cut line and handle, ink square slider thumb.",
+      "html": "<div class=\"ds-peel\"><div class=\"ds-wall\"><div class=\"ds-layer ds-l4\"><span class=\"ds-lname\">4 · Zidărie</span></div><div class=\"ds-layer ds-l3\" style=\"--x:25%\"><span class=\"ds-lname\">3 · Instalații</span></div><div class=\"ds-layer ds-l2\" style=\"--x:50%\"><span class=\"ds-lname\">2 · Tencuială</span></div><div class=\"ds-layer ds-l1\" style=\"--x:75%\"><span class=\"ds-lname\">1 · Finisaj</span></div><div class=\"ds-cut\"><span><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M9 6l-5 6 5 6M15 6l5 6-5 6\"/></svg></span></div></div><label class=\"ds-depth\"><span>Adâncimea desfacerii <output>Zidăria găsită</output></span><input type=\"range\" min=\"0\" max=\"300\" value=\"300\"></label></div>",
+      "css": ".ds-peel { display: grid; gap: 14px; padding: 16px; background: var(--plaster, #e4e2dc); color: var(--anthracite, #222426); } .ds-wall { position: relative; height: 260px; overflow: hidden; background: var(--anthracite, #222426); cursor: ew-resize; } .ds-layer { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--x, 0%)); } .ds-layer::after { content: ''; position: absolute; top: 0; bottom: 0; left: var(--x, 0%); width: 10px; background: linear-gradient(90deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0)); } .ds-l4 { background: repeating-linear-gradient(0deg, #d9d6ce 0 3px, transparent 3px 22px), repeating-linear-gradient(90deg, #a8452e 0 44px, #d9d6ce 44px 47px), #a8452e; } .ds-l4::after { display: none; } .ds-l3 { background: linear-gradient(var(--paper, #f4f3ef), var(--paper, #f4f3ef)) 0 30% / 100% 5px no-repeat, linear-gradient(var(--oak, #b5834a), var(--oak, #b5834a)) 0 85% / 100% 8px no-repeat, #6f716e; } .ds-l2 { background: #9fa19d; } .ds-l1 { background: #ecebe6; } .ds-lname { position: absolute; top: 12px; left: calc(var(--x, 0%) + 10px); padding: 5px 9px; background: var(--paper, #f4f3ef); font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 750; font-size: 0.78rem; letter-spacing: 0.02em; white-space: nowrap; } .ds-cut { position: absolute; top: 0; bottom: 0; left: 75%; width: 0; } .ds-cut::before { content: ''; position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: var(--white, #ffffff); } .ds-cut span { position: absolute; top: 50%; left: -22px; width: 44px; height: 44px; margin-top: -22px; display: grid; place-items: center; background: var(--white, #ffffff); color: var(--anthracite, #222426); box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.45); } .ds-depth { display: grid; gap: 8px; font-family: var(--cond, 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif); font-weight: 650; font-size: 0.9rem; color: var(--graphite, #505356); } .ds-depth > span { display: flex; justify-content: space-between; } .ds-depth output { color: var(--anthracite, #222426); font-weight: 800; } .ds-depth input { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; margin: 0; background: transparent; cursor: pointer; } .ds-depth input::-webkit-slider-runnable-track { height: 4px; background: var(--anthracite, #222426); } .ds-depth input::-moz-range-track { height: 4px; background: var(--anthracite, #222426); } .ds-depth input::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; margin-top: -9px; border: 0; border-radius: 0; background: var(--ink, #2433b8); box-shadow: 0 0 0 3px var(--plaster, #e4e2dc); } .ds-depth input::-moz-range-thumb { width: 22px; height: 22px; border: 0; border-radius: 0; background: var(--ink, #2433b8); box-shadow: 0 0 0 3px var(--plaster, #e4e2dc); } .ds-depth input:focus-visible { outline: none; } .ds-depth input:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #222426; } .ds-depth input:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #222426; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signed Sample Board",
+    "overview": "The site is laid out like the finish sample board an interior architect puts in front of a client before work starts. The ground is lime plaster. Anthracite porcelain carries the type and the dark fields. Every photograph is a sample cut with square edges and set on the board with a narrow seam, and a printed paper tag hangs from its lower corner, code first (M-01 to M-07), then the name, then the spec. The materials bring their own colour: oak, stone, tile, brick, concrete. The interface adds almost none. Ballpoint blue is the one colour of the visitor's own hand. It marks the call to request an estimate, the step they are on, the boxes they tick, and the field they are writing in.\n\nType works like the print on an adhesive sack. One family, Sofia Sans, comes in three widths. Extra Condensed, heavy and in capitals, sets headings and every figure the firm stands behind: prices, durations, contract values, clause numbers. Condensed sets tags, labels, controls and data values. The regular width sets reading text only. Numbers come before adjectives on the page too: in every spec group the figure is the largest thing, with its label small beside or under it.\n\nDensity is medium to high and editorial rather than app-like. Asymmetric splits (7/5, 5/7, 4/8) hold a heading on one side and a ledger, board or form on the other. Lists of records (price list, schedule, FAQ, roster, timeline, contact lines) are ledgers ruled in anthracite, not stacks of cards. Motion is mechanical and single-axis: chips are placed onto the board once on load, the wall section's layers slide along one axis, and schedule bars draw in as they scroll into view.",
+    "keyCharacteristics": [
+      "Lime plaster ground (#e4e2dc) with anthracite (#222426) type and dark fields; paper (#f4f3ef) for everything pinned to the board.",
+      "Square-cut photo chips on a 6px seam; every chip carries a paper tag with a concentric eyelet.",
+      "Sofia Sans in three widths: Extra Condensed for display and figures, Condensed for tags and controls, regular for reading.",
+      "Ballpoint blue (#2433b8) only where the visitor acts, chooses or signs.",
+      "Ledgers opened by a 2px anthracite rule and divided by 1px rules.",
+      "Flat surfaces. Depth comes from the seam and from field tone, never from card shadows.",
+      "One signature interaction: the wall section, which peels from finish to the masonry the crew finds underneath."
+    ],
+    "rules": [
+      {
+        "name": "The Ballpoint Rule",
+        "body": "Blue is the visitor's pen. It appears where the visitor acts, chooses or signs: primary calls to act, the current step, ticked boxes and check marks, the field being written in, and the handle of the wall section. Browsing never turns blue. Nav links, text links, the project filter, FAQ toggles, line buttons and headings stay anthracite, and no section, card or panel is ever filled with it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Samples Bring the Colour Rule",
+        "body": "The interface is plaster, paper and anthracite. Warm and mineral colour comes from the photographs. Oak is drawn by the UI only in the mark, the schedule's hand-over bar and dates, and the installation scheme.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Is Pinned Rule",
+        "body": "Paper is never a section ground. It is the stock of things pinned on the board, and it sits on plaster, sunk plaster or a photo with a seam or a 1px rule around it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sack Print Rule",
+        "body": "Headings and figures are Extra Condensed, uppercase, weight 820 to 880, set tight: 0.96 leading for headings, so Romanian diacritics clear the line below, and 0.9 for single-line figures. That face never sets a sentence longer than a heading, and reading text never uses a condensed width.",
+        "section": "typography"
+      },
+      {
+        "name": "The Figure First Rule",
+        "body": "In every spec group, whether a sheet, a ledger, a service's facts, a clause or a price, the number is set in Extra Condensed 850 with tabular lining numerals and is the largest element. Its label sits under or before it in small Condensed graphite.",
+        "section": "typography"
+      },
+      {
+        "name": "The Seam Rule",
+        "body": "Samples on a board are separated only by the 6px seam of the ground beneath them. There is no gutter, border or shadow between chips.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ledger Rule",
+        "body": "A list of records opens on a 2px anthracite rule and divides rows with 1px rule lines. There are no boxes and no zebra striping. This covers the price list, schedule, FAQ, company card, roster, timeline and contact lines. On dark fields the rules become Rule Dark.",
+        "section": "layout"
+      },
+      {
+        "name": "The Pinned, Not Floating Rule",
+        "body": "Nothing lifts on hover. Hover changes colour, fills a line button, or zooms the photo inside its fixed chip (scale 1.035 to 1.05 over 0.9s). A shadow means an object is physically on top of something: a tag, a handle, or the floating WhatsApp tag.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Cut Edge Rule",
+        "body": "Surfaces are square. The 2px radius belongs only to things you press or type into, and the eyelet is the only circle.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Pinned Tag Rule",
+        "body": "No photograph appears on the board without its paper tag. A photo that is not a material sample carries \"foto ilustrativă\" as its spec, which keeps the stock imagery honest.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** set every call to act (\"Cere ofertă\", \"Cere deviz\", \"Trimite cererea\", the action bar's main cell) as a ballpoint-blue button (#2433b8, #1a258c on hover), and keep WhatsApp and phone as anthracite line buttons with the green glyph.",
+      "**Do** separate samples on a board with the 6px seam and let the ground show through.",
+      "**Do** pin a paper tag to every photo chip: code first (M-01 to M-07) for material samples, \"foto ilustrativă\" as the spec for every other photo.",
+      "**Do** set every figure in Extra Condensed 850 with tabular lining numerals as the largest element of its group, with the label in small Condensed graphite.",
+      "**Do** open every list of records on a 2px anthracite rule and divide rows with 1px rule lines.",
+      "**Do** alternate plaster, sunk plaster and anthracite fields between sections, and keep paper for things pinned to the board and for the stuck header.",
+      "**Do** give every focusable element the double ring (3px white outline, 5px anthracite halo), and give text fields the ink border with the Ink Wash ring.",
+      "**Do** keep motion on one axis and once only: chips placed on load, layers peeled sideways, schedule bars drawn left to right. Collapse it all under reduced motion, where the wall starts fully peeled."
+    ],
+    "donts": [
+      "**Don't** use ballpoint blue for text links, headings, section or card fills, decorative icons, or browsing controls (nav, project filter, FAQ toggles, line buttons).",
+      "**Don't** round chips, tags, sheets, cards, forms or ledgers. The 2px radius belongs only to buttons, inputs, choice tiles and filter chips, and the eyelet is the only circle.",
+      "**Don't** lift chips, sheets or cards with shadows or hover elevation. Depth comes from the seam and from field tone.",
+      "**Don't** set reading text in a condensed width, or headings and figures in the regular width.",
+      "**Don't** add interface colours outside the palette. Oak and concrete come from the photographs, and the UI draws oak only in the mark, the schedule's hand-over bar and dates, and the installation scheme.",
+      "**Don't** use star glyphs for ratings. A rating is five 10px squares.",
+      "**Don't** drop the footer line that says the firm is fictional and the photographs are illustrative."
+    ]
+  }
+}

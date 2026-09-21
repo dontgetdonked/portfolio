@@ -49,7 +49,7 @@ function edge(i: number, d: number) {
 }
 
 /* Layer 3 is drawn as the installation scheme handed over at reception:
-   routes, boxes and circuit labels, all kept between x 255 and 395 of the
+   routes, boxes and circuit labels, all kept between x 270 and 395 of the
    view box: the band this layer shows when the wall is fully peeled, on a
    wide wall and on a square phone wall alike. */
 function Routes() {
@@ -57,20 +57,20 @@ function Routes() {
   return (
     <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
       <g fill="none" strokeLinecap="square">
-        <path d="M0 110H800M272 110V420M372 110V250" stroke="#f4f3ef" strokeWidth="7" />
-        <path d="M0 530H800M330 530V400" stroke="#b5834a" strokeWidth="11" />
+        <path d="M0 110H800M300 110V420M372 110V250" stroke="#f4f3ef" strokeWidth="7" />
+        <path d="M0 530H800M345 530V400" stroke="#b5834a" strokeWidth="11" />
       </g>
       <g fill="#222426" stroke="#f4f3ef" strokeWidth="4">
-        <rect x="253" y="420" width="38" height="38" />
+        <rect x="281" y="420" width="38" height="38" />
         <rect x="353" y="250" width="38" height="38" />
       </g>
-      <rect x="311" y="362" width="38" height="38" fill="#222426" stroke="#b5834a" strokeWidth="4" />
+      <rect x="326" y="362" width="38" height="38" fill="#222426" stroke="#b5834a" strokeWidth="4" />
       <g style={label} fill="#f4f3ef">
-        <text x="260" y="52">SCHEMA</text>
-        <text x="260" y="76">LA PREDARE</text>
-        <text x="284" y="190">C1 · prize</text>
+        <text x="270" y="52">SCHEMA</text>
+        <text x="270" y="76">LA PREDARE</text>
+        <text x="310" y="190">C1 · prize</text>
         <text x="392" y="322" textAnchor="end">C2 · iluminat</text>
-        <text x="300" y="488">doză</text>
+        <text x="281" y="488">doză</text>
       </g>
       <text x="392" y="578" textAnchor="end" style={label} fill="#e0b27c">
         apă rece

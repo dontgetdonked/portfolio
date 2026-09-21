@@ -21,19 +21,24 @@
   --anthracite-2: #2d3032;
   --anthracite-3: #3a3d40;
   --graphite: #505356;
+  --graphite-deep: #45484b;
+  --placeholder: #74777a;
   --concrete: #8f918d;
   --rule: #c4c1b9;
   --rule-strong: #a3a098;
+  --edge: #7d7a73;
   --rule-dark: rgba(244, 243, 239, 0.16);
   --on-dark: #f4f3ef;
   --on-dark-2: #b9bab6;
   --oak: #b5834a;
-  --oak-deep: #86592a;
+  --oak-deep: #74491d;
   --ink: #2433b8;
   --ink-deep: #1a258c;
   --ink-wash: #e3e5f6;
   --alert: #a8261c;
   --whatsapp: #1c8f4d;
+  --whatsapp-light: #5fd08d;
+  --ink-light: #9aa6ff;
 
   --display: 'Sofia Sans Extra Condensed Variable', 'Arial Narrow', sans-serif;
   --cond: 'Sofia Sans Condensed Variable', 'Arial Narrow', sans-serif;
@@ -122,7 +127,7 @@ h2 {
   font-family: var(--display);
   font-weight: 820;
   text-transform: uppercase;
-  line-height: 0.9;
+  line-height: 0.96;
   letter-spacing: -0.012em;
 }
 
@@ -404,7 +409,7 @@ dd {
 }
 
 .field-dark .btn-line .wa {
-  color: #5fd08d;
+  color: var(--whatsapp-light);
 }
 
 .field-dark .btn-line:hover .wa {
@@ -501,7 +506,7 @@ dd {
   justify-self: stretch;
 }
 
-@container (max-width: 380px) {
+@container (max-width: 340px) {
   .tag {
     font-size: 0.76rem;
   }
@@ -531,6 +536,14 @@ dd {
   .tag b {
     margin-right: 0;
   }
+}
+
+/* the plaster chip's own tag always has room for one line; the container
+   query above measures the chip's padded content box, not the tag's room */
+.hero-plaster > .tag .tag-spec,
+.page-plaster > .tag .tag-spec {
+  display: inline;
+  margin-left: 7px;
 }
 
 .hide-sm {
@@ -614,7 +627,7 @@ dd {
 
 .field-dark .checks .box {
   border-color: var(--on-dark-2);
-  color: #9aa6ff;
+  color: var(--ink-light);
 }
 
 /* ---------------------------------------------------------------- header -- */
@@ -885,7 +898,7 @@ dd {
 .hero-plaster {
   grid-column: 1 / -1;
   background: var(--plaster);
-  padding: 24px 20px 58px;
+  padding: 24px 20px 64px;
   display: grid;
   align-content: end;
   gap: 18px;
@@ -924,12 +937,12 @@ dd {
 
 .hero-plaster .lede {
   max-width: 50ch;
-  color: #45484b;
+  color: var(--graphite-deep);
 }
 
 .hero-note {
   font-size: var(--t-small);
-  color: #45484b;
+  color: var(--graphite-deep);
   max-width: 52ch;
 }
 
@@ -1257,14 +1270,6 @@ dd {
   transition: opacity 0.2s;
 }
 
-.wall-layer.is-base .wall-layer.is-base::after {
-  display: none;
-}
-
-.wall-name {
-  left: 10px;
-}
-
 .wall-cut {
   position: absolute;
   top: 0;
@@ -1330,12 +1335,12 @@ dd {
 
 .depth input[type='range']::-webkit-slider-runnable-track {
   height: 4px;
-  background: linear-gradient(90deg, var(--anthracite) var(--fill, 0%), var(--rule-strong) var(--fill, 0%));
+  background: linear-gradient(90deg, var(--anthracite) var(--fill, 0%), var(--edge) var(--fill, 0%));
 }
 
 .depth input[type='range']::-moz-range-track {
   height: 4px;
-  background: var(--rule-strong);
+  background: var(--edge);
 }
 
 .depth input[type='range']::-moz-range-progress {
@@ -2094,7 +2099,7 @@ a.sheet:hover .sheet-photo > img {
 }
 
 .page-plaster .lede {
-  color: #45484b;
+  color: var(--graphite-deep);
 }
 
 .crumb {
@@ -2104,7 +2109,7 @@ a.sheet:hover .sheet-photo > img {
   font-family: var(--cond);
   font-weight: 650;
   font-size: 0.9rem;
-  color: #45484b;
+  color: var(--graphite-deep);
 }
 
 .crumb a {
@@ -2230,7 +2235,7 @@ a.sheet:hover .sheet-photo > img {
 .filter button {
   min-height: 42px;
   padding: 0 16px;
-  border: 1.5px solid var(--rule-strong);
+  border: 1.5px solid var(--edge);
   border-radius: 2px;
   background: transparent;
   font-family: var(--cond);
@@ -2605,7 +2610,7 @@ a.sheet:hover .sheet-photo > img {
   width: 100%;
   min-height: 50px;
   padding: 12px 14px;
-  border: 1.5px solid var(--rule-strong);
+  border: 1.5px solid var(--edge);
   border-radius: 2px;
   background: var(--white);
   font-size: 1rem;
@@ -2630,7 +2635,7 @@ a.sheet:hover .sheet-photo > img {
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #74777a;
+  color: var(--placeholder);
 }
 
 .field input:hover,
@@ -2681,7 +2686,7 @@ a.sheet:hover .sheet-photo > img {
   gap: 12px;
   align-items: start;
   padding: 13px 14px;
-  border: 1.5px solid var(--rule-strong);
+  border: 1.5px solid var(--edge);
   border-radius: 2px;
   background: transparent;
   text-align: left;
@@ -2895,7 +2900,7 @@ a.sheet:hover .sheet-photo > img {
 }
 
 .action-bar a .wa {
-  color: #5fd08d;
+  color: var(--whatsapp-light);
 }
 
 .action-bar a.is-main {
@@ -2932,7 +2937,7 @@ a.sheet:hover .sheet-photo > img {
     transition: background-color 0.2s;
   }
   .wa-float svg {
-    color: #5fd08d;
+    color: var(--whatsapp-light);
   }
   .wa-float:hover {
     background: var(--anthracite-3);
