@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { company } from '@/data/site'
 import { IconClose, IconMenu, IconPhone } from '@/components/icons'
@@ -26,6 +26,9 @@ export function Header() {
   const [stuck, setStuck] = useState(false)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const burger = useRef<HTMLButtonElement>(null)
+  const closer = useRef<HTMLButtonElement>(null)
+  const wasOpen = useRef(false)
 
   useEffect(() => {
     const onScroll = () => setStuck(window.scrollY > 8)
@@ -38,6 +41,15 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
+    /* Send focus into the drawer when it opens and hand it back when it closes,
+       so the keyboard never ends up behind the overlay. */
+    if (open) {
+      closer.current?.focus()
+      wasOpen.current = true
+    } else if (wasOpen.current) {
+      burger.current?.focus({ preventScroll: true })
+      wasOpen.current = false
+    }
     return () => {
       document.body.style.overflow = ''
     }
@@ -84,7 +96,10 @@ export function Header() {
             <Link className="btn btn-sm" to="/oferta">
               Cere ofertă
             </Link>
-            <button className="burger" type="button" onClick={() => setOpen(true)} aria-expanded={open}>
+            <a className="hdr-phone" href={company.phoneHref} aria-label={`Sună la ${company.phone}`}>
+              <IconPhone />
+            </a>
+            <button ref={burger} className="burger" type="button" onClick={() => setOpen(true)} aria-expanded={open}>
               <IconMenu />
               Meniu
             </button>
@@ -99,7 +114,7 @@ export function Header() {
               <Logo />
               <span>ATRIUM Construct</span>
             </Link>
-            <button className="drawer-close" type="button" onClick={() => setOpen(false)}>
+            <button ref={closer} className="drawer-close" type="button" onClick={() => setOpen(false)}>
               <IconClose />
               Închide
             </button>

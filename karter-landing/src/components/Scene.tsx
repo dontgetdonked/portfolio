@@ -397,27 +397,6 @@ export function Scene({
   )
 }
 
-/* Abstract portraits: a hard hat and a silhouette on a cement field. No face,
-   so nobody is impersonated and the team block still reads as people. */
-export function Portrait({ seed }: { seed: number }) {
-  const hats = ['#1d5fd6', '#b98a4b', '#2b3f4c', '#1d7a54']
-  const hat = hats[seed % hats.length]
-  const shift = (seed % 3) * 10
-  return (
-    <svg viewBox="0 0 320 240" role="presentation">
-      <rect width="320" height="240" fill="#e3e3de" />
-      <path d="M0 200h320" stroke="#b9bdb7" strokeWidth="2" />
-      <path d={`M${40 + shift} 240v-40`} stroke="#b9bdb7" strokeWidth="2" />
-      <path d={`M${272 - shift} 240v-64`} stroke="#b9bdb7" strokeWidth="2" />
-      <path d="M96 240c0-42 28-66 64-66s64 24 64 66z" fill="#2b3f4c" />
-      <circle cx="160" cy="126" r="38" fill="#7d8d97" />
-      <path d="M114 106a46 46 0 0192 0z" fill={hat} />
-      <path d="M104 106h112" stroke={hat} strokeWidth="9" strokeLinecap="round" />
-      <path d="M160 174v66" stroke="#e3e3de" strokeWidth="2" opacity="0.4" />
-    </svg>
-  )
-}
-
 /* A plan-view of the neighbourhood around the office, in the drawing's own
    language: blocks, streets, and a marker where the door is. */
 export function MapArt() {

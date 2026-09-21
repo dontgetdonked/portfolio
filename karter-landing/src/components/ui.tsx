@@ -3,30 +3,51 @@ import { Link } from 'react-router-dom'
 import { company, whatsappLink } from '@/data/site'
 import { IconCheck, IconStar, IconWhatsApp } from '@/components/icons'
 
-/* The rule above a section carries a measure of what follows — a count, a
-   price, a year — rather than a decorative label. */
+/* A hairline opens the section; the count that used to sit above the heading
+   now reads as a sentence next to it, where it is content instead of a label. */
 export function Opener({
   measure,
   title,
   text,
   aside,
 }: {
-  measure: string
+  measure?: string
   title: string
   text?: string
   aside?: ReactNode
 }) {
   return (
     <div className="opener">
-      <p className="opener-rule">{measure}</p>
       <div className="opener-text">
         <h2>{title}</h2>
         <div className="stack-sm">
           {text && <p className="lede">{text}</p>}
+          {measure && <p className="measure">{measure}</p>}
           {aside}
         </div>
       </div>
     </div>
+  )
+}
+
+/* Four figures read as a row from a spec sheet: label first, value second,
+   set in tabular numerals so the columns line up. */
+export function Ledger({
+  items,
+  tone = 'light',
+}: {
+  items: readonly { value: string; label: string }[]
+  tone?: 'light' | 'dark'
+}) {
+  return (
+    <dl className={tone === 'dark' ? 'ledger is-dark' : 'ledger'}>
+      {items.map((item) => (
+        <div key={item.label}>
+          <dt>{item.label}</dt>
+          <dd>{item.value}</dd>
+        </div>
+      ))}
+    </dl>
   )
 }
 

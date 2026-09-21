@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div>
-          <h5 className="footer-brand">ATRIUM Construct SRL</h5>
+          <h2 className="footer-h footer-brand">ATRIUM Construct SRL</h2>
           <p style={{ fontSize: '0.93rem' }}>
             Construim și renovăm în Cluj-Napoca din 2011, cu echipe proprii și un singur contract
             pentru toată lucrarea.
@@ -23,7 +23,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h5>Servicii</h5>
+          <h2 className="footer-h">Servicii</h2>
           <ul>
             {services.map((s) => (
               <li key={s.slug}>
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h5>Firma</h5>
+          <h2 className="footer-h">Firma</h2>
           <ul>
             <li>
               <Link to="/proiecte">Proiecte</Link>
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h5>Zone acoperite</h5>
+          <h2 className="footer-h">Zone acoperite</h2>
           <ul>
             {company.coverage.map((c) => (
               <li key={c}>{c}</li>

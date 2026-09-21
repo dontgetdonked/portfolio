@@ -88,43 +88,6 @@ export function IconStar({ size = 15, className }: IconProps) {
   )
 }
 
-export function IconDoc({ size = 22, className }: IconProps) {
-  return (
-    <svg {...base(size)} className={className}>
-      <path d="M6 3.5h7.5L18 8v12.5H6z" />
-      <path d="M13.5 3.5V8H18M8.8 12.5h6.4M8.8 16h4.4" />
-    </svg>
-  )
-}
-
-export function IconLock({ size = 22, className }: IconProps) {
-  return (
-    <svg {...base(size)} className={className}>
-      <rect x="4.5" y="10.5" width="15" height="9.5" rx="1.5" />
-      <path d="M8 10.5V8a4 4 0 118 0v2.5" />
-    </svg>
-  )
-}
-
-export function IconTeam({ size = 22, className }: IconProps) {
-  return (
-    <svg {...base(size)} className={className}>
-      <circle cx="9" cy="8.5" r="3.2" />
-      <path d="M3.5 19.5c0-3 2.5-4.8 5.5-4.8s5.5 1.8 5.5 4.8" />
-      <path d="M16 6.2a3.2 3.2 0 010 6.3M17.5 15.4c2 .6 3.3 2.1 3.3 4.1" />
-    </svg>
-  )
-}
-
-export function IconShield({ size = 22, className }: IconProps) {
-  return (
-    <svg {...base(size)} className={className}>
-      <path d="M12 3l7 2.6v6c0 4.2-2.9 7.8-7 9.4-4.1-1.6-7-5.2-7-9.4v-6z" />
-      <path d="M9 12l2.2 2.2L15.2 10" />
-    </svg>
-  )
-}
-
 export function IconDrag({ size = 18, className }: IconProps) {
   return (
     <svg {...base(size)} className={className}>
@@ -147,11 +110,4 @@ export function IconClose({ size = 18, className }: IconProps) {
       <path d="M6 6l12 12M18 6L6 18" />
     </svg>
   )
-}
-
-export const promiseIcons = {
-  doc: IconDoc,
-  lock: IconLock,
-  team: IconTeam,
-  shield: IconShield,
 }

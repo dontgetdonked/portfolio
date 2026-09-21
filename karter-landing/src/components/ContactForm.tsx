@@ -6,9 +6,9 @@ type Data = { name: string; phone: string; email: string; subject: string; messa
 type Errors = Partial<Record<keyof Data, string>>
 
 const subjects = [
-  'Vreau o ofertă pentru o lucrare',
-  'Am o lucrare începută și vreau o a doua opinie',
-  'Colaborare ca furnizor sau subcontractor',
+  'Ofertă pentru o lucrare',
+  'A doua opinie la o lucrare',
+  'Colaborare ca furnizor',
   'Angajare în echipă',
   'Altceva',
 ]

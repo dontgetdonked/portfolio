@@ -13,8 +13,8 @@ import {
 import { BeforeAfter } from '@/components/BeforeAfter'
 import { Scene } from '@/components/Scene'
 import { Faq } from '@/components/Faq'
-import { CtaBand, Opener, Stars } from '@/components/ui'
-import { promiseIcons, IconWhatsApp } from '@/components/icons'
+import { CtaBand, Ledger, Opener, Stars } from '@/components/ui'
+import { IconWhatsApp } from '@/components/icons'
 
 const hero = projects[0]
 const featured = projects.filter((p) => p.featured)
@@ -69,44 +69,33 @@ export default function Home() {
         </div>
 
         <div className="wrap">
-          <div className="hero-facts">
-            {stats.map((s) => (
-              <div className="hero-fact" key={s.label}>
-                <b>{s.value}</b>
-                <span>{s.label}</span>
-              </div>
-            ))}
-          </div>
+          <Ledger items={stats} />
         </div>
       </section>
 
       <section className="band band-tight">
         <div className="wrap">
           <Opener
-            measure="Patru lucruri scrise în fiecare contract"
-            title="Ce primești, indiferent cât de mare e lucrarea"
+            title="Ce scriem în fiecare contract"
+            text="Patru clauze care nu se negociază, de la o baie de 6 mp până la o casă întreagă."
           />
-          <div className="promises">
-            {promises.map((p) => {
-              const Icon = promiseIcons[p.icon]
-              return (
-                <div className="promise" key={p.title}>
-                  <Icon />
-                  <h4>{p.title}</h4>
-                  <p>{p.text}</p>
-                </div>
-              )
-            })}
-          </div>
+          <ul className="terms">
+            {promises.map((p) => (
+              <li key={p.title}>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section className="band band-plaster">
         <div className="wrap">
           <Opener
-            measure={`${services.length} categorii de lucrări`}
             title="Servicii"
             text="Prețurile de mai jos sunt punctele de pornire din 2026, cu materiale de gamă medie. Devizul final îl primești după măsurători."
+            measure={`${services.length} categorii de lucrări, toate executate de echipele noastre.`}
             aside={
               <Link className="link-u" to="/servicii">
                 Vezi ce include fiecare serviciu
@@ -140,9 +129,9 @@ export default function Home() {
       <section className="band">
         <div className="wrap">
           <Opener
-            measure="3 dintre cele 318 lucrări predate"
             title="Lucrări recente din Cluj"
             text="Fiecare lucrare are bugetul și durata reale, așa cum au fost în contract."
+            measure="Trei dintre cele 318 lucrări predate din 2011 încoace."
             aside={
               <Link className="link-u" to="/proiecte">
                 Deschide portofoliul complet
@@ -186,7 +175,6 @@ export default function Home() {
       <section className="band band-dark">
         <div className="wrap">
           <Opener
-            measure="Cum decurge o lucrare, pas cu pas"
             title="De la primul telefon la cheia predată"
             text="Sunt cinci etape și fiecare are un termen. Dacă îl depășim noi, plătim penalizare, la fel ca tine dacă întârzii o tranșă."
           />
@@ -208,8 +196,8 @@ export default function Home() {
       <section className="band band-plaster">
         <div className="wrap">
           <Opener
-            measure="4,9 din 5, pe 112 recenzii"
             title="Ce spun oamenii după recepție"
+            measure="Media este 4,9 din 5, pe 112 recenzii."
             aside={
               <Link className="link-u" to="/testimoniale">
                 Citește toate testimonialele

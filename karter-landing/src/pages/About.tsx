@@ -1,6 +1,5 @@
 import { company, history, stats, team } from '@/data/site'
-import { Portrait } from '@/components/Scene'
-import { Checklist, CtaBand, Opener, PageHead } from '@/components/ui'
+import { Checklist, CtaBand, Ledger, Opener, PageHead } from '@/components/ui'
 
 const rules = [
   'Nu începem o lucrare fără contract semnat și grafic de execuție.',
@@ -41,38 +40,31 @@ export default function About() {
 
       <section className="band band-dark band-tight">
         <div className="wrap">
-          <div className="hero-facts" style={{ marginTop: 0, background: 'transparent', borderColor: 'var(--line-dark)' }}>
-            {stats.map((s) => (
-              <div className="hero-fact" key={s.label} style={{ background: 'transparent' }}>
-                <b>{s.value}</b>
-                <span style={{ color: 'rgba(237,237,233,0.66)' }}>{s.label}</span>
-              </div>
-            ))}
-          </div>
+          <Ledger items={stats} tone="dark" />
         </div>
       </section>
 
       <section className="band band-plaster">
         <div className="wrap">
-          <Opener measure="Cine răspunde de lucrarea ta" title="Echipa de coordonare" />
-          <div className="team">
-            {team.map((m, i) => (
-              <article className="member" key={m.name}>
-                <Portrait seed={i} />
-                <div>
-                  <b>{m.name}</b>
-                  <span>{m.role}</span>
-                  <span>În echipă {m.since}</span>
-                </div>
-              </article>
+          <Opener
+            title="Cine răspunde de lucrarea ta"
+            text="Patru oameni coordonează toate șantierele. Pe cel care îți deschide lucrarea îl cunoști la prima vizită."
+          />
+          <ul className="roster">
+            {team.map((m) => (
+              <li key={m.name}>
+                <b>{m.name}</b>
+                <span>{m.role}</span>
+                <span>În echipă {m.since}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       <section className="band">
         <div className="wrap">
-          <Opener measure="15 ani de firmă" title="Cum am ajuns aici" />
+          <Opener title="Cum am ajuns aici" text="Cincisprezece ani, de la două echipe de finisaje la patru departamente." />
           <div className="timeline">
             {history.map((h) => (
               <div className="tl-row" key={h.year}>

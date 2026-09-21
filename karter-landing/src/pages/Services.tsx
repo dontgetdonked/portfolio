@@ -49,7 +49,6 @@ export default function Services() {
       <section className="band band-dark band-tight">
         <div className="wrap">
           <Opener
-            measure="Aceleași cinci etape la orice lucrare"
             title="Cum lucrăm"
             text="Etapa curentă și cea următoare sunt scrise în raportul de vineri, ca să știi mereu unde s-a ajuns."
           />

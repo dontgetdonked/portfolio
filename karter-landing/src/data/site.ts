@@ -386,34 +386,31 @@ export const processSteps = [
   },
 ]
 
+/* Read as the clauses they are: each one is written into every contract. */
 export const promises = [
   {
-    title: 'Deviz în 3 zile',
+    title: 'Deviz în 3 zile lucrătoare',
     text: 'Cu manoperă și materiale defalcate pe cameră, ca să știi unde se duce fiecare sumă.',
-    icon: 'doc' as const,
   },
   {
     title: 'Preț fix prin contract',
     text: 'Devizul semnat este prețul final. Modificările se fac doar în scris, cu acordul tău.',
-    icon: 'lock' as const,
   },
   {
-    title: 'Echipe proprii',
-    text: '26 de oameni angajați, nu zilieri. Aceiași meseriași de la demolare până la recepție.',
-    icon: 'team' as const,
+    title: 'Echipe proprii, nu zilieri',
+    text: '26 de oameni angajați cu contract. Aceiași meseriași de la demolare până la recepție.',
   },
   {
-    title: 'Garanție 5 ani',
-    text: 'La manoperă, plus garanția producătorului pentru fiecare material pus în operă.',
-    icon: 'shield' as const,
+    title: 'Garanție 5 ani la manoperă',
+    text: 'Plus garanția producătorului pentru fiecare material pus în operă, cu certificate la predare.',
   },
 ]
 
 export const stats = [
-  { value: '14', label: 'ani de când lucrăm în Cluj' },
-  { value: '318', label: 'lucrări predate la cheie' },
-  { value: '26', label: 'meseriași angajați cu contract' },
-  { value: '5 ani', label: 'garanție scrisă la manoperă' },
+  { label: 'Ani de când lucrăm în Cluj', value: '14' },
+  { label: 'Lucrări predate la cheie', value: '318' },
+  { label: 'Meseriași angajați cu contract', value: '26' },
+  { label: 'Garanție scrisă la manoperă', value: '5 ani' },
 ]
 
 export const team = [
